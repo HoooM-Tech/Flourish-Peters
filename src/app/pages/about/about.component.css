@@ -1,0 +1,373 @@
+#hero{
+    width: auto;
+    height: 60vh;
+    background: url('/assets/about/about-hero.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.center-text{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 45%;
+}
+.center-text h1{
+    color: rgba(255, 255, 255, 1);
+    font-size: 80px;
+    line-height: 90.2px;
+    font-weight: 400;
+}
+
+/* About */
+#about{
+    width: auto;
+    height: 50vh;
+    background: linear-gradient(250.46deg, #3E3E3E 6.06%, #100A0C 42.39%, #070D2B 59.79%);
+    display: flex;
+    justify-content: center;
+}
+.about-fp{
+    width: 80vw;
+    height: 350px;
+    text-align: center;
+    text-align-last: left;
+    margin-top: 80px;
+}
+.about-fp h2{
+    color: rgba(255, 255, 255, 1);
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 47px;
+    padding-left: 450px;
+}
+.about-fp p{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 33px;
+    color: rgba(255, 255, 255, 1);
+}
+
+/* MAIN MAN */
+#fp-image{
+    width: auto;
+    height: 50vh;
+    background: url('/assets/about/fp.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* About Owner */
+#about-ministry{
+    width: auto;
+    height: auto;
+    background: linear-gradient(250.46deg, #3E3E3E 6.06%, #100A0C 42.39%, #070D2B 59.79%);
+    display: flex;
+    justify-content: center;
+}
+.about-church{
+    width: 80vw;
+    height: 500px;
+    text-align: center;
+    text-align-last: left;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.about-church h2{
+    color: rgba(255, 255, 255, 1);
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 47px;
+    padding-left: 450px;
+}
+.about-church p{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 33px;
+    color: rgba(255, 255, 255, 1);
+}
+
+/* Giving */
+#give{
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background: url('/assets/home/give-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.giving{
+    width: 100vw;
+    height: 500px;
+    background: rgba(0, 0, 0, 0.7);
+    position: relative;
+}
+.giving h2{
+    color: rgba(255, 255, 255, 1);
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 37px;
+}
+.giving button{
+    box-shadow: -2px -10px 6.3px 0px rgba(50, 50, 50, 0.25) inset;
+    backdrop-filter: blur(10px);
+    border: 0.5px solid rgba(255, 255, 255, 1);
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: 400;
+    width: 130px;
+    height: 55px;
+    margin-top: 100px;
+    margin-left: 150px;
+    background: transparent;
+    border-radius: 12px;
+}
+.content{
+    top: 25%;
+    left: 30%;
+    position: absolute;
+}
+.content button:hover{
+    cursor: pointer;
+}
+
+
+/* RESPONSIVENESS */
+@media screen and (max-width: 1440px) {
+    #hero{
+        width: 1440px;
+    }
+    #about{
+        width: 1440px;
+    }
+    .about-fp{
+        width: 1296px !important;
+        justify-content: space-between;
+    }
+    #fp-image{
+        width: 1440px;
+    }
+    #about-ministry{
+        width: 1440px;
+    }
+    .about-church{
+        width: 1296px !important;
+        justify-content: space-between;
+    }
+    #give{
+        width: 1440px;
+    }
+    .giving{
+        width: 1440px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+@media screen and (max-width: 1280px) {
+    #hero{
+        width: auto;
+    }
+    #about{
+        width: auto;
+        justify-content: center;
+    }
+    .about-fp{
+        width: 1152px !important;
+    }
+    #about-ministry{
+        width: auto;
+    }
+    .about-church{
+        width: 1152px !important;
+    }
+    #give{
+        width: auto;
+    }
+}
+@media screen and (max-width: 1024px) {
+    #hero{
+        width: auto;
+    }
+    #about{
+        width: auto;
+    }
+    .about-fp{
+        width: 920px !important;
+    }
+    .about-fp h2{
+        padding-left: 320px;
+    }
+    #about-ministry{
+        width: auto;
+    }
+    .about-church{
+        width: 920px !important;
+        padding-bottom: 20px;
+    }
+    .about-church h2{
+        padding-left: 350px;
+    }
+}
+@media screen and (max-width: 920px) {
+    #hero{
+        width: auto;
+    }
+    #about{
+        width: auto;
+    }
+    .about-fp{
+        width: 828px !important;
+    }
+    #about-ministry{
+        width: auto;
+    }
+    .about-church{
+        width: 828px !important;
+        padding-bottom: 80px !important;
+    }
+}
+@media screen and (max-width: 854px) {
+    #hero{
+        width: auto;
+    }
+    #about{
+        width: auto;
+    }
+    #fp-image{
+        width: auto;
+        height: 50vh;
+        background-size: cover !important;
+    }
+    .about-fp{
+        width: 768px !important;
+    }
+    .about-fp h2{
+        padding-left: 250px !important;
+    }
+    #about-ministry{
+        width: auto;
+    }
+    .about-church{
+        width: 768px !important;
+        padding-bottom: 150px !important;
+    }
+    .about-church h2{
+        padding-left: 300px !important;
+    }
+}
+@media screen and (max-width: 768px) {
+    .about-fp{
+        width: 690px !important;
+    }
+    #fp-image{
+        background-size: contain;
+    }
+    .about-church{
+        width: 690px !important;
+        padding-bottom: 200px !important;
+    }
+    .about-fp h2{
+        padding-left: 250px !important;
+    }
+    .about-church h2{
+        padding-left: 250px !important;
+    }
+}
+@media screen and (max-width: 540px) {
+    #hero{
+        width: auto;
+    }
+    #about{
+        width: auto;
+    }
+    .about-fp{
+        width: 480px !important;
+    }
+    .about-fp h2{
+        padding-left: 100px !important;
+    }
+    #about-ministry{
+        width: auto;
+    }
+    .about-church{
+        width: 480px !important;
+        padding-bottom: 550px !important;
+    }
+    .about-church h2{
+        padding-left: 150px !important;
+    }
+}
+@media screen and (max-width: 431px) {
+    #hero{
+        width: auto;
+    }
+    #about{
+        height: auto;
+    }
+    .about-fp{
+        width: 380px !important;
+        padding-bottom: 50px !important;
+    }
+    #about-ministry{
+        width: auto;
+    }
+    .about-church{
+        width: 380px !important;
+        padding-bottom: 900px !important;
+    }
+    .about-church h2{
+        padding-left: 100px !important;
+    }
+    .about-fp h2{
+        padding-left: 60px !important;
+    }
+}
+@media screen and (max-width: 414px) {
+    
+}
+@media screen and (max-width: 391px) {
+    #about{
+        width: auto;
+        height: auto;
+    }
+    .about-fp{
+        width: 350px !important;
+        padding-bottom: 180px !important;
+    }
+    .about-church{
+        width: 350px !important;
+        padding-bottom: 950px !important;
+    }
+}
+@media screen and (max-width: 376px) {
+    .about-fp{
+        padding-bottom: 180px !important;
+    }
+}
+@media screen and (max-width: 360px) {
+    .about-fp{
+        width: 320px !important;
+    }
+    #about-ministry{
+        height: auto !important;
+    }
+    .about-church{
+        width: 320px !important;
+        padding-bottom: 1100px !important;
+    }
+}
+@media screen and (max-width: 320px) {
+    .about-fp{
+        width: 288px !important;
+    }
+    #about-ministry{
+        height: auto !important;
+    }
+    .about-church{
+        width: 288px !important;
+        padding-bottom: 1300px !important;
+    }
+}
