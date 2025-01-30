@@ -131,11 +131,7 @@
     background: transparent;
     border-radius: 12px;
 }
-.content{
-    top: 25%;
-    left: 30%;
-    position: absolute;
-}
+
 .content button:hover{
     cursor: pointer;
 }
