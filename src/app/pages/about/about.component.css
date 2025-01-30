@@ -96,20 +96,26 @@
     background: url('/assets/home/give-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
 }
-.giving{
-    width: 100vw;
-    height: 500px;
+.content{
+    width: auto;
+    height: 400px;
     background: rgba(0, 0, 0, 0.7);
     position: relative;
+    align-items: center;
+  text-align: center;
+  margin-top: 100px;
 }
-.giving h2{
+.content h2{
     color: rgba(255, 255, 255, 1);
     font-size: 35px;
     font-weight: 500;
     line-height: 37px;
 }
-.giving button{
+.content button{
     box-shadow: -2px -10px 6.3px 0px rgba(50, 50, 50, 0.25) inset;
     backdrop-filter: blur(10px);
     border: 0.5px solid rgba(255, 255, 255, 1);
@@ -121,7 +127,7 @@
     width: 130px;
     height: 55px;
     margin-top: 100px;
-    margin-left: 150px;
+    /* margin-left: 150px; */
     background: transparent;
     border-radius: 12px;
 }
@@ -275,6 +281,15 @@
     .about-church h2{
         padding-left: 250px !important;
     }
+    #give{
+        width: auto;
+        justify-content: center;
+        align-items: center;
+      }
+      .content{
+        margin-top: 200px;
+        height: 350px;
+      }
 }
 @media screen and (max-width: 540px) {
     #hero{
