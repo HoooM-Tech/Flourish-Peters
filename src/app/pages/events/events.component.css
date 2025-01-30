@@ -130,6 +130,57 @@ label{
         width: auto;
     }
 }
+@media screen and (max-width: 768px) {
+    .center-text{
+        width: auto;
+        left: 300px;
+    }
+}
+@media screen and (max-width: 540px) {
+    .center-text{
+        left: 180px !important;
+    }
+    #events{
+        width: auto !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    .event-box{
+        width: auto;
+        flex-direction: column !important;
+    }
+    .filter{
+        width: 300px;
+    }
+    .available-events{
+        width: 300px;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 431px) {
+    .center-text{
+        width: auto;
+        left: 140px !important;
+    }
+    .center-text h1{
+        font-size: 60px !important;
+    }
+}
+@media screen and (max-width: 391px) {
+    .center-text{
+        left: 120px !important;
+    }
+}
+@media screen and (max-width: 360px) {
+    .center-text{
+        left: 100px !important;
+    }
+}
+@media screen and (max-width: 321px) {
+    .center-text{
+        left: 80px !important;
+    }
+}
 @media screen and (max-width: 420px) {
     .center-text{
         width: auto;

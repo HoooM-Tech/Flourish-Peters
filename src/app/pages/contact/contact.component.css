@@ -129,26 +129,196 @@ form textarea::placeholder{
         width: 1440px;
     }
     .contact-container{
-        width: 1296px !important;
+        width: auto;
     }
 }
-
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 1280px) {
     #hero{
         width: auto;
     }
     .center-text{
         width: auto;
     }
-    .contact-container{
-        align-content: center;
-        align-items: center;
-        flex-wrap: wrap;
+    #contact-fp{
+        width: auto;
     }
-    .contact-left{
+    .contact-container{
         width: auto;
     }
     .contact-right{
+        width: 600px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    #hero{
         width: auto;
+    }
+    .center-text{
+        width: auto;
+    }
+    #contact-fp{
+        width: auto !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    .contact-container{
+        width: auto !important;
+        flex-direction: column !important;
+    }
+    .contact-right{
+        width: 650px;
+    }
+    .contact-left{
+        width: 650px;
+    }
+    form input{
+        width: 600px;
+        font-size: 18px;
+    }
+    form textarea{
+        width: 600px !important;
+    }
+    .form button{
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .center-text{
+        left: 180px !important;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .center-text{
+        left: 80px !important;
+    }
+    #contact-fp{
+        width: auto;
+    }
+    .contact-left{
+        width: 480px !important;
+    }
+    .contact-right{
+        width: 450px !important;
+
+    }
+    form input{
+        width: 450px !important;
+    }
+    form textarea{
+        width: 450px !important;
+    }
+    .form button{
+        width: 450px !important;
+    }
+}
+
+@media screen and (max-width: 431px) {
+    #hero{
+        width: auto;
+    }
+    .center-text{
+        width: auto;
+    }
+    .center-text h1{
+        font-size: 60px !important;
+    }
+    .contact-left{
+        width: 400px !important;
+    }
+    .contact-right{
+        width: 400px !important;
+
+    }
+    form input{
+        width: 400px !important;
+    }
+    form textarea{
+        width: 400px !important;
+    }
+    .form button{
+        width: 400px !important;
+    }
+}
+@media screen and (max-width: 390px) {
+    #hero{
+        width: auto;
+    }
+    .center-text{
+        width: auto;
+    }
+    .contact-left{
+        width: 350px !important;
+    }
+    .contact-right{
+        width: 350px !important;
+
+    }
+    form input{
+        width: 350px !important;
+    }
+    form textarea{
+        width: 350px !important;
+    }
+    .form button{
+        width: 350px !important;
+    }
+}
+@media screen and (max-width: 376px) {
+    .center-text{
+        left: 50px !important;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #hero{
+        width: auto;
+    }
+    .center-text{
+        width: auto;
+    }
+    .contact-left{
+        width: 330px !important;
+    }
+    .contact-right{
+        width: 330px !important;
+
+    }
+    form input{
+        width: 330px !important;
+    }
+    form textarea{
+        width: 330px !important;
+    }
+    .form button{
+        width: 330px !important;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    #hero{
+        width: auto;
+    }
+    .center-text{
+        width: auto;
+        left: 25px !important;
+    }
+    .contact-left{
+        width: 300px !important;
+    }
+    .contact-right{
+        width: 300px !important;
+
+    }
+    form input{
+        width: 300px !important;
+    }
+    form textarea{
+        width: 300px !important;
+    }
+    .form button{
+        width: 300px !important;
     }
 }

@@ -131,7 +131,13 @@ ul li:hover {
     position: fixed;
     right: -350px;
     top: 75px;
-    background: rgba(255, 255, 255, 1);
+    background: linear-gradient(
+    117.26deg,
+    rgba(39, 39, 39, 0.9) 5.06%,
+    #100a0c 26.6%,
+    #070d2b 81.73%
+  );
+    /* background: rgba(255, 255, 255, 1); */
     border-radius: 10px;
     width: 280px;
     height: 100vh;

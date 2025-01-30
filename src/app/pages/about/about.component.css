@@ -261,6 +261,11 @@
     }
 }
 @media screen and (max-width: 768px) {
+    
+    .center-text{
+        width: auto;
+        left: 300px;
+    }
     .about-fp{
         width: 690px !important;
     }
@@ -291,6 +296,10 @@
     #hero{
         width: auto;
     }
+    .center-text{
+        left: 180px !important;
+    }
+
     #about{
         width: auto;
     }
@@ -317,6 +326,13 @@
     }
     #about{
         height: auto;
+    }
+    .center-text{
+        width: auto;
+        left: 140px !important;
+    }
+    .center-text h1{
+        font-size: 60px !important;
     }
     .about-fp{
         width: 380px !important;
@@ -350,6 +366,9 @@
     
 }
 @media screen and (max-width: 391px) {
+    .center-text{
+        left: 120px !important;
+    }
     #about{
         width: auto;
         height: auto;
@@ -369,6 +388,9 @@
     }
 }
 @media screen and (max-width: 360px) {
+    .center-text{
+        left: 100px !important;
+    }
     .about-fp{
         width: 320px !important;
     }
@@ -380,7 +402,10 @@
         padding-bottom: 1100px !important;
     }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 321px) {
+    .center-text{
+        left: 80px !important;
+    }
     .about-fp{
         width: 288px !important;
     }
