@@ -777,7 +777,7 @@ div.center-text {
 }
 @media screen and (max-width: 768px) {
   .center-text{
-    margin-top: 50px;
+    margin-top: 30px;
   }
   #shop{
     justify-content: center !important;
@@ -1006,7 +1006,7 @@ div.center-text {
     overflow-y: hidden;
   }
   .center-text{
-    margin-top: -100px !important;
+    margin-top: -150px !important;
     width: 400px !important;
     text-align: center !important;
     justify-content: center !important;
@@ -1111,9 +1111,9 @@ div.center-text {
 @media screen and (max-width: 412px) {
   
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 391px) {
   .center-text{
-    margin-top: 60px !important;
+    margin-top: -100px !important;
     width: 400px !important;
     text-align: center !important;
     justify-content: center !important;
@@ -1122,7 +1122,7 @@ div.center-text {
 }
 @media screen and (max-width: 376px) {
   .center-text{
-    margin-top: 25px !important;
+    margin-top: 10px !important;
     width: 340px !important;
   }
   .hero-button{
@@ -1133,7 +1133,10 @@ div.center-text {
     margin-top: 30px !important;
   }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 361px) {
+  .center-text{
+    margin-top: -30px !important;
+  }
   .hero-button{
     margin-top: 25px !important;
     margin-left: 50px !important;
