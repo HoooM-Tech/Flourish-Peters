@@ -139,7 +139,7 @@ ul li{
         width: auto;
         flex-direction: column !important;
         justify-content: center;
-        align-items: center;
+        align-items: left;
     }
     .subscribe{
       width: 700px !important;

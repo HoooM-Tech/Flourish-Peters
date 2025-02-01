@@ -164,7 +164,7 @@ form textarea::placeholder{
     }
     .contact-container{
         width: auto !important;
-        flex-direction: column !important;
+        flex-direction: column-reverse !important;
     }
     .contact-right{
         width: 650px;
