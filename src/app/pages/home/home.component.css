@@ -72,6 +72,10 @@ div.center-text {
 .hero-button button:hover {
   cursor: pointer;
 }
+.hero-button button{
+  padding-left: 25px;
+  padding-right: 25px;
+}
 .center-img {
   margin-top: 85px;
 }
@@ -124,13 +128,7 @@ div.center-text {
   align-items: center;
   justify-content: center;
   gap: 45px;
-  border-left: 3px solid;
-  border-image-source: linear-gradient(
-    177.25deg,
-    rgba(254, 254, 254, 0) 9.87%,
-    rgba(234, 234, 234, 0.7) 36.65%,
-    rgba(152, 152, 152, 0) 83.03%
-  );
+  border-left: 3px solid var(--rr, rgba(254, 254, 254, 0.00));
 }
 .book {
   width: 230px;
@@ -156,6 +154,22 @@ div.center-text {
   opacity: 80%;
   padding-bottom: 10px;
 }
+.book strong{
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  padding-bottom: 10px;
+}
+.book .price{
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  opacity: 80%;
+  padding-bottom: 10px;
+}
+
 .book button {
   width: 180px;
   height: 50px;
@@ -200,6 +214,7 @@ div.center-text {
   );
   /* height: 100vh; */
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 #teachings .message-content {
@@ -237,13 +252,7 @@ div.center-text {
   align-items: center;
   justify-content: center;
   gap: 45px;
-  border-left: 3px solid;
-  border-image-source: linear-gradient(
-    177.25deg,
-    rgba(254, 254, 254, 0) 9.87%,
-    rgba(234, 234, 234, 0.7) 36.65%,
-    rgba(152, 152, 152, 0) 83.03%
-  );
+  border-left: 3px solid var(--rr, rgba(254, 254, 254, 0.00));
 }
 .get-message {
   width: 230px;
@@ -284,6 +293,7 @@ div.center-text {
     #070d2b 59.79%
   );
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 #event .event-content {
@@ -322,13 +332,7 @@ div.center-text {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  border-left: 3px solid;
-  border-image-source: linear-gradient(
-    177.25deg,
-    rgba(254, 254, 254, 0) 9.87%,
-    rgba(234, 234, 234, 0.7) 36.65%,
-    rgba(152, 152, 152, 0) 83.03%
-  );
+  border-left: 3px solid var(--rr, rgba(254, 254, 254, 0.00));
 }
 .get-event {
   position: relative;
@@ -428,6 +432,12 @@ div.center-text {
 .story p {
   padding-left: 8px;
   padding-right: 8px;
+}
+.story{
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-top: 15px;
 }
 
 /* PRAYER */
@@ -740,6 +750,10 @@ div.center-text {
     display: flex !important;
     flex-wrap: wrap !important;
   }
+  .new-mmt{
+    width: 854px !important;
+    display: block !important;
+  }
   .books{
     width: 750px !important;
     overflow: hidden;
@@ -797,6 +811,10 @@ div.center-text {
   }
   .book1{
     margin-left: 80px;
+  }
+  .new-mmt{
+    display: block !important;
+    width: 768px;
   }
 
   /* MESSAGE */
@@ -945,6 +963,10 @@ div.center-text {
     width: 350px !important;
     flex-wrap: wrap !important;
   }
+  .new-mmt{
+    display: block !important;
+    width: 540px !important;
+  }
   #event{
     width: auto !important;
     justify-content: center !important;
@@ -999,6 +1021,9 @@ div.center-text {
     margin-top: 200px;
     height: 350px;
   }
+  .prayer-text button{
+    margin-top: 20px !important;
+  }
 }
 @media screen and (max-width: 431px) {
   #hero{
@@ -1041,6 +1066,16 @@ div.center-text {
     align-items: center !important;
     flex-wrap: wrap !important;
   }
+  .shop-left{
+    width: 420px !important;
+    text-align: center !important;
+  }
+  .shop-left h2{
+    font-size: 30px !important;
+  }
+  .shop-left img{
+    display: none !important;
+  }
   .books{
     width: auto !important;
     flex-wrap: wrap !important;
@@ -1053,6 +1088,10 @@ div.center-text {
     justify-content: center !important;
     align-items: center !important;
   }
+  .new-mmt{
+    display: block !important;
+    width: 430px !important;
+  }
   .message-content{
     flex-wrap: wrap !important;
     width: auto !important;
@@ -1061,6 +1100,16 @@ div.center-text {
   }
   .message-left{
     margin-left: 20px;
+  }
+  .message-left{
+    width: 420px !important;
+    text-align: center !important;
+  }
+  .message-left h2{
+    font-size: 30px !important;
+  }
+  .message-left img{
+    display: none !important;
   }
   .sermons{
     width: auto !important;
@@ -1079,7 +1128,18 @@ div.center-text {
   }
   .event-left{
     margin-left: 20px;
-    width: 350px;
+    width: 420px;
+    text-align: center !important;
+  }
+  .get-event{
+    padding-left: 20px !important;
+    margin-left: 30px !important;
+  }
+  .event-left h2{
+    font-size: 30px !important;
+  }
+  .event-left img{
+    display: none !important;
   }
   .events{
     width: auto !important;
@@ -1097,19 +1157,74 @@ div.center-text {
     flex-wrap: wrap !important;
   }
   .story-text{
-    margin-left: 20px;
-    width: 350px;
+    /* margin-left: 20px; */
+    width: 380px !important;
+    text-align: center !important;
   }
+  .story-text h2{
+    font-size: 30px !important;
+  }
+
   .testimonials{
     width: auto !important;
     flex-wrap: wrap !important;
   }
 }
-@media screen and (max-width: 414px) {
-  
+@media screen and (max-width: 426px) {
+  .center-text{
+    margin-top: 5px !important;
+    width: 400px !important;
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .center-img{
+    margin-top: 80px !important;
+  }
+  .new-mmt{
+    display: block !important;
+    width: 425px !important;
+  }
+  .story-text{
+    width: 380px !important;
+    text-align: center !important;
+  }
+  .story-text h2{
+    font-size: 30px !important;
+  }
+}
+@media screen and (max-width: 415px) {
+  .center-text{
+    margin-top: -100px !important;
+    width: 400px !important;
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .new-mmt{
+    display: block !important;
+    width: 414px !important;
+  }
+  .story-text{
+    width: 380px !important;
+    text-align: center !important;
+  }
+  .story-text h2{
+    font-size: 30px !important;
+  }
 }
 @media screen and (max-width: 412px) {
-  
+  .new-mmt{
+    display: block !important;
+    width: 412px !important;
+  }
+  .story-text{
+    width: 380px !important;
+    text-align: center !important;
+  }
+  .story-text h2{
+    font-size: 30px !important;
+  }
 }
 @media screen and (max-width: 391px) {
   .center-text{
@@ -1118,6 +1233,36 @@ div.center-text {
     text-align: center !important;
     justify-content: center !important;
     align-items: center !important;
+  }
+  .new-mmt{
+    display: block !important;
+    width: 390px !important;
+  }
+  .shop-left{
+    width: 350px !important;
+    text-align: center !important;
+  }
+  .message-left{
+    /* margin-left: 20px; */
+    width: 350px !important;
+    text-align: center !important;
+  }
+  .get-event{
+    padding-left: 20px !important;
+    margin-left: 20px !important;
+  }
+  .event-left{
+    /* margin-left: 20px; */
+    width: 350px !important;
+    text-align: center !important;
+  }
+  .story-text{
+    /* margin-left: 20px; */
+    width: 350px !important;
+    text-align: center !important;
+  }
+  .story-text h2{
+    font-size: 30px !important;
   }
 }
 @media screen and (max-width: 376px) {
@@ -1132,6 +1277,21 @@ div.center-text {
   .center-img{
     margin-top: 30px !important;
   }
+  .new-mmt{
+    display: block !important;
+    width: 375px !important;
+  }
+  .get-event{
+    padding-left: 20px !important;
+    margin-left: 30px !important;
+  }
+  .story-text{
+    width: 340px !important;
+    text-align: center !important;
+  }
+  .story-text h2{
+    font-size: 30px !important;
+  }
 }
 @media screen and (max-width: 361px) {
   .center-text{
@@ -1140,6 +1300,33 @@ div.center-text {
   .hero-button{
     margin-top: 25px !important;
     margin-left: 50px !important;
+  }
+  .new-mmt{
+    display: block !important;
+    width: 360px !important;
+  }
+  .shop-left{
+    width: 310px !important;
+    text-align: center !important;
+  }
+  .message-left{
+    width: 310px !important;
+    text-align: center !important;
+  }
+  .event-left{
+    width: 310px !important;
+    text-align: center !important;
+  }
+  .story-text{
+    width: 310px !important;
+    text-align: center !important;
+  }
+  .story-text h2{
+    font-size: 30px !important;
+  }
+  .get-event{
+    padding-left: 20px !important;
+    margin-left: 30px !important;
   }
 }
 @media screen and (max-width: 344px) {
@@ -1151,16 +1338,20 @@ div.center-text {
     margin-left: 40px !important;
   }
   .shop-left h2{
-    font-size: 45px !important;
+    font-size: 30px !important;
+  }
+  .new-mmt{
+    width: 344px !important;
+    display: block !important;
   }
   .message-left h2{
-    font-size: 40px !important;
+    font-size: 30px !important;
   }
   .event-left h2{
-    font-size: 45px !important;
+    font-size: 30px !important;
   }
   .story-text h2{
-    font-size: 40px !important;
+    font-size: 30px !important;
   }
   .shop-left{
     margin-left: 20px !important;
@@ -1170,13 +1361,24 @@ div.center-text {
     margin-left: 20px;
     margin-top: 5px !important;
   }
+  .get-event{
+    padding-left: 20px !important;
+    margin-left: 20px !important;
+  }
   .event-left{
     margin-left: 20px;
     margin-top: 5px !important;
   }
   .story-text{
-    margin-left: 30px;
+    /* margin-left: 30px; */
     margin-top: 5px !important;
+  }
+  .story-text{
+    width: 310px !important;
+    text-align: center !important;
+  }
+  .story-text h2{
+    font-size: 30px !important;
   }
   .shop-content{
     margin-top: 80px !important;
@@ -1191,7 +1393,7 @@ div.center-text {
     margin-top: 80px !important;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 321px) {
   .center-text{
     margin-top: 10px !important;
   }
@@ -1206,6 +1408,21 @@ div.center-text {
   }
   .shop-left{
     width: 300px !important;
+  }
+  .new-mmt{
+    display: block !important;
+    width: 320px !important;
+  }
+  .get-event{
+    /* padding-left: 20px !important; */
+    margin-left: 30px !important;
+  }
+  .story-text{
+    width: 300px !important;
+    text-align: center !important;
+  }
+  .story-text h2{
+    font-size: 30px !important;
   }
 }
 
@@ -1222,7 +1439,9 @@ div.center-text {
   div.center-text {
     width: auto;
   }
-
+  .new-mmt{
+    display: none;
+  }
   div.center-text h1 {
     font-size: 40px;
   }

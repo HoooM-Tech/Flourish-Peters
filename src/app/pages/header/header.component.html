@@ -14,9 +14,14 @@
             <li (click)="closeMenu()">Sermon</li>
             <li routerLink="/support" (click)="closeMenu()">Give</li>
             <li routerLink="/about-flourish-peters" (click)="closeMenu()">About</li>
-            <li><button routerLink="/contact-us" class="nav-btn" (click)="closeMenu()">Contact Us</button></li>
+            <li routerLink="/contact-us" (click)="closeMenu()">Contact Us</li>
+            <li class="not-show"><button routerLink="/join-mmt" class="nav-btn" (click)="closeMenu()">Join MMT</button></li>
         </ul>
         
+    </div>
+
+    <div class="far-right">
+        <button routerLink="/join-mmt" class="nav-btn" (click)="closeMenu()">Join MMT</button>
     </div>
     
 </nav>
