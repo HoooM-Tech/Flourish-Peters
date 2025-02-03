@@ -89,19 +89,16 @@ div.center-text {
     #100a0c 42.39%,
     #070d2b 59.79%
   );
-  /* height: 100vh; */
   display: flex;
   justify-content: center;
 }
 #shop .shop-content {
   width: auto;
   display: flex;
-  /* flex-wrap: wrap; */
-  /* height: 500px; */
   justify-content: space-between;
   margin-top: 130px;
   margin-bottom: 100px;
-  gap: 30px;
+  gap: 150px;
 }
 .shop-left {
   width: 400px;
@@ -160,6 +157,10 @@ div.center-text {
   font-weight: 400;
   color: rgba(255, 255, 255, 1);
   padding-bottom: 10px;
+}
+.prices{
+  display: flex;
+  gap: 5px;
 }
 .book .price{
   font-size: 14px;
@@ -220,12 +221,11 @@ div.center-text {
 #teachings .message-content {
   width: auto;
   display: flex;
-  /* height: 500px; */
-  /* flex-wrap: wrap; */
-  justify-content: space-between;
+  /* justify-content: space-between; */
   margin-top: 130px;
   margin-bottom: 100px;
-  gap: 50px;
+  margin-left: 150px;
+  gap: 150px;
 }
 .message-left {
   width: 400px;
@@ -299,13 +299,11 @@ div.center-text {
 #event .event-content {
   width: auto;
   display: flex;
-  /* flex-wrap: wrap; */
-  gap: 50px;
-  /* height: 500px; */
-  justify-content: space-between;
-  /* used padding instead of margin */
+  gap: 80px;
   padding-top: 120px;
   padding-bottom: 120px;
+  margin-left: 80px;
+
 }
 .event-left {
   width: 430px;
@@ -325,7 +323,8 @@ div.center-text {
   line-height: 83px;
 }
 .events {
-  width: auto;
+  width: 900px;
+  /* overflow-x: scroll; */
   /* height: 500px; */
   display: flex;
   /* flex-wrap: wrap; */
@@ -333,6 +332,9 @@ div.center-text {
   justify-content: center;
   gap: 20px;
   border-left: 3px solid var(--rr, rgba(254, 254, 254, 0.00));
+}
+.precept1{
+  margin-left: 50px;
 }
 .get-event {
   position: relative;
@@ -392,7 +394,7 @@ div.center-text {
   width: auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 150px;
   justify-content: space-between;
   margin-top: 150px;
   margin-bottom: 100px;
@@ -429,15 +431,16 @@ div.center-text {
   opacity: 60%;
   border-radius: 10px;
 }
+.profile{
+  display: flex;
+  gap: 5px;
+}
 .story p {
   padding-left: 8px;
   padding-right: 8px;
 }
 .story{
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 15px;
-  padding-top: 15px;
+  padding: 15px;
 }
 
 /* PRAYER */
