@@ -98,6 +98,7 @@
 }
 .abt-right{
     width: 500px;
+    text-align-last: left;
 }
 .abt-right h2{
     color: rgba(7, 44, 80, 1);
@@ -418,6 +419,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    padding-bottom: 10px;
 }
 .story{
     background: rgba(245, 245, 245, 0.94);
@@ -485,3 +487,43 @@
 }
 
 /* RESPONSIVENESS */
+@media only screen and (max-width: 1440px) {
+    #hero{
+        width: 1440px;
+    }
+    .hero-content{
+        gap: 200px;
+        left: 0;
+        margin-left: 80px;
+    }
+    .about-content{
+        width: 1440px;
+    }
+    .main-abt{
+        left: 0;
+        gap: 200px;
+        margin-left: 25px;
+    }
+    .rol{
+        right: 0;
+    }
+    .why-join{
+        width: 1440px;
+    }
+    .whyjoin-mmt{
+        margin-left: 80px !important;
+    }
+    .desc-content{
+        width: 750px;
+        margin-left: 200px;
+    }
+    .register{
+        width: 1440px;
+    }
+    #testimonial{
+        width: 1440px;
+    }
+    #contact{
+        width: 1440px;
+    }
+}
