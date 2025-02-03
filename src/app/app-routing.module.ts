@@ -6,6 +6,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { EventsComponent } from './pages/events/events.component';
 import { GiveComponent } from './pages/give/give.component';
 import { ShopComponent } from './pages/shop/shop.component';
+import { MmtComponent } from './pages/mmt/mmt.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: 'about-flourish-peters', component: AboutComponent},
   {path: 'contact-us', component: ContactComponent},
   {path: 'our-events', component: EventsComponent},
-  {path: 'support', component: GiveComponent}
+  {path: 'support', component: GiveComponent},
+  {path: 'join-mmt', component: MmtComponent}
 ];
 
 @NgModule({

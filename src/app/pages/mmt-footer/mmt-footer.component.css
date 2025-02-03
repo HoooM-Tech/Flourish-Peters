@@ -1,0 +1,32 @@
+footer{
+    width: 100vw;
+    background: rgba(245, 245, 245, 1);
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+    width: 80vw;
+    display: block;
+    border-top: 0.3px solid rgba(7, 44, 80, 0.1);
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+.right{
+    gap: 15px;
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.content p{
+    text-align: center;
+    color: rgba(7, 44, 80, 1);
+    font-size: 13px;
+    padding-top: 15px;
+    padding-bottom: 8px;
+}

@@ -12,6 +12,9 @@ import { GiveComponent } from './pages/give/give.component';
 import { ShopComponent } from './pages/shop/shop.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { HeaderComponent } from './pages/header/header.component';
+import { MmtComponent } from './pages/mmt/mmt.component';
+import { MmtNavComponent } from './pages/mmt-nav/mmt-nav.component';
+import { MmtFooterComponent } from './pages/mmt-footer/mmt-footer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { HeaderComponent } from './pages/header/header.component';
     GiveComponent,
     ShopComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    MmtComponent,
+    MmtNavComponent,
+    MmtFooterComponent
   ],
   imports: [
     BrowserModule,
