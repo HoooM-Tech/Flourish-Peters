@@ -434,6 +434,7 @@ div.center-text {
 .profile{
   display: flex;
   gap: 5px;
+  padding-bottom: 15px;
 }
 .story p {
   padding-left: 8px;
@@ -476,9 +477,6 @@ div.center-text {
   border-color: rgba(255, 255, 255, 0.3);
 }
 .prayer-text {
-  /* position: absolute;
-  left: 25%;
-  top: 25%; */
   height: 500px;
   background: url('/assets/home/new.png');
   background-size: cover;
@@ -579,15 +577,9 @@ div.center-text {
   width: 130px;
   height: 55px;
   margin-top: 100px;
-  /* margin-left: 150px; */
   background: transparent;
   border-radius: 12px;
 }
-/* .content {
-  top: 25%;
-  left: 30%;
-  position: absolute;
-} */
 .content button:hover {
   cursor: pointer;
 }
@@ -617,10 +609,49 @@ div.center-text {
 }
 
 @media screen and (max-width: 1280px) {
+  #shop{
+    width: 1280px;
+  }
+  .books{
+    width: 600px;
+    overflow-x: scroll !important;
+  }
+  .book1{
+    margin-left: 180px;
+  }
   .events{
     width: 500px;
     display: flex !important;
     overflow-x: scroll !important;
+  }
+  .message-content{
+    margin-left: 100px !important;
+  }
+  .message-left{
+    width: 400px;
+  }
+  .sermons{
+    width: 500px;
+    display: flex !important;
+    overflow-x: scroll !important;
+  }
+  .message1{
+    margin-left: 160px;
+  }
+  .new-mmt{
+    width: 1280px !important;
+  }
+  #event{
+    width: 1280px;
+  }
+  #testimonial{
+    width: 1280px;
+  }
+  #prayer{
+    width: 1280px;
+  }
+  #give{
+    width: 1280px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -629,6 +660,7 @@ div.center-text {
   }
   .shop-content{
     width: auto;
+    gap: 50px !important;
   }
   .shop-left h2{
     font-size: 50px;
@@ -649,6 +681,7 @@ div.center-text {
   }
   .message-content{
     width: auto;
+    margin-left: 50px !important;
   }
   .message-left h2{
     font-size: 50px;
@@ -667,8 +700,12 @@ div.center-text {
   .event-left h2{
     font-size: 50px;
   }
+  .event-content{
+    margin-left: 50px !important;
+  }
   .story-text{
     width: 380px;
+    margin-left: 30px;
   }
   .story-text h2{
     font-size: 50px;
@@ -681,16 +718,31 @@ div.center-text {
   .precept1{
     margin-left: 300px;
   }
+  .testimonial-content{
+    gap: 50px;
+  }
   .testimonials{
     width: 900px;
   }
-  .giving{
+  #prayer{
+    width: auto;
     justify-content: center;
-    align-items: center;
+  }
+  .prayer-text{
+    width: 700px;
+  }
+  #give{
+    width: auto !important;
+    justify-content: center !important;
+    align-items: center !important;
   }
   .content{
     align-items: center;
     justify-content: center;
+    width: 700px !important;
+  }
+  .new-mmt{
+    width: 1024px;
   }
 }
 @media screen and (max-width: 920px) {
@@ -708,18 +760,21 @@ div.center-text {
   }
   .shop-content{
     width: auto;
+    margin-left: 25px;
   }
   .shop-left{
     width: 320px;
+    margin-left: 15px;
   }
   .books{
-    width: 450px;
+    width: 400px;
   }
   .book1{
     margin-left: 350px;
   }
   .message-left{
     width: 320px;
+    margin-left: 15px;
   }
   .sermons{
     width: 420px;
@@ -732,6 +787,7 @@ div.center-text {
   }
   .event-left{
     width: 320px;
+    margin-left: 15px;
   }
   .events{
     width: 450px;
@@ -819,6 +875,12 @@ div.center-text {
     display: block !important;
     width: 768px;
   }
+  .event-content{
+    margin-left: 30px;
+  }
+  .events{
+    width: 600px !important;
+  }
 
   /* MESSAGE */
   #teachings{
@@ -864,12 +926,15 @@ div.center-text {
   }
   /* Testimonial */
   #testimonial{
+    width: auto;
     justify-content: center;
     align-items: center;
   }
   .testimonial-content{
     justify-content: center;
     align-items: center;
+    display: flex !important;
+    flex-direction: column !important;
   }
   .story-text{
     width: 500px;
@@ -1080,11 +1145,15 @@ div.center-text {
     display: none !important;
   }
   .books{
-    width: auto !important;
-    flex-wrap: wrap !important;
+    width: 400px !important;
+    flex-wrap: nowrap !important;
+    overflow-x: scroll;
   }
   .book{
     margin-left: 1px !important;
+  }
+  .book1{
+    margin-left: 300px !important;
   }
   #teachings{
     width: auto !important;
@@ -1100,6 +1169,7 @@ div.center-text {
     width: auto !important;
     justify-content: center !important;
     align-items: center !important;
+    margin-left: 2px !important;
   }
   .message-left{
     margin-left: 20px;
@@ -1114,9 +1184,13 @@ div.center-text {
   .message-left img{
     display: none !important;
   }
+  .message1{
+    margin-left: 300px !important;
+  }
   .sermons{
-    width: auto !important;
-    flex-wrap: wrap !important;
+    width: 400px !important;
+    flex-wrap: nowrap !important;
+    overflow-x: scroll;
   }
   #event{
     width: auto !important;
@@ -1145,8 +1219,12 @@ div.center-text {
     display: none !important;
   }
   .events{
-    width: auto !important;
-    flex-wrap: wrap !important;
+    width: 400px !important;
+    flex-wrap: nowrap !important;
+    overflow-x: scroll;
+  }
+  .precept1{
+    margin-left: 300px !important;
   }
   #testimonial{
     width: auto !important;
@@ -1160,7 +1238,6 @@ div.center-text {
     flex-wrap: wrap !important;
   }
   .story-text{
-    /* margin-left: 20px; */
     width: 380px !important;
     text-align: center !important;
   }
@@ -1169,8 +1246,12 @@ div.center-text {
   }
 
   .testimonials{
-    width: auto !important;
-    flex-wrap: wrap !important;
+    width: 400px !important;
+    flex-wrap: nowrap !important;
+    overflow-x: scroll;
+  }
+  .story1{
+    margin-left: 300px !important;
   }
 }
 @media screen and (max-width: 426px) {
@@ -1246,7 +1327,6 @@ div.center-text {
     text-align: center !important;
   }
   .message-left{
-    /* margin-left: 20px; */
     width: 350px !important;
     text-align: center !important;
   }
@@ -1255,12 +1335,10 @@ div.center-text {
     margin-left: 20px !important;
   }
   .event-left{
-    /* margin-left: 20px; */
     width: 350px !important;
     text-align: center !important;
   }
   .story-text{
-    /* margin-left: 20px; */
     width: 350px !important;
     text-align: center !important;
   }

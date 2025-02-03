@@ -125,7 +125,9 @@
 .why-join{
     width: 100%;
     height: auto;
-    position: relative;
+    background: url('/assets/mmt/Group3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .whyjoin-mmt{
     display: block;
@@ -233,13 +235,15 @@
 .register{
     width: 100%;
     height: auto;
-    position: relative;
-    background: rgba(245, 245, 245, 1);
+    background: url('/assets/mmt/Group34.png');
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .whyregister{
     display: block;
     padding-top: 100px;
-    margin-left: 120px;
     padding-bottom: 50px;
 }
 .wjm{
@@ -394,7 +398,11 @@
 #testimonial{
     width: 100%;
     height: auto;
-    position: relative;
+    background: url('/assets/mmt/Group4.png');
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .feedback{
     display: block;
