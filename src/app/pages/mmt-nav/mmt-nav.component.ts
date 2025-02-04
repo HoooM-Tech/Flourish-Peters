@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-mmt-nav',
@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class MmtNavComponent {
 
+  ScrollToSection(sectionId: string){
+    const element = document.getElementById(sectionId);
+    if(element){
+      element.scrollIntoView({behavior: 'smooth'});
+    }
+  }
 }

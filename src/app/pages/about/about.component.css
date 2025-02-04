@@ -20,32 +20,48 @@
 }
 
 /* About */
-#about{
+.about-flourish-peter{
     width: auto;
-    height: 50vh;
-    background: linear-gradient(250.46deg, #3E3E3E 6.06%, #100A0C 42.39%, #070D2B 59.79%);
     display: flex;
     justify-content: center;
+    background: linear-gradient(303deg, #2B3877 -1.27%, #070D2B 28.68%);}
+.about-mcontent{
+    width: auto;
+    display: flex;
+    gap: 50px;
+    background: red;
 }
-.about-fp{
-    width: 80vw;
+.short-bio p{
+    font-size: 14px;
+    line-height: 27px;
+    color: rgba(255, 255, 255, 1);
+}
+.img{
+    background: url('/assets/about/flourish_p.png');
+    width: 290px;
     height: 350px;
-    text-align: center;
-    text-align-last: left;
-    margin-top: 80px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-.about-fp h2{
+.main-bio{
+    width: 750px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.main-bio p{
+    color: rgba(255, 255, 255, 1);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 36px;
+    text-align-last: left;
+}
+.main-bio h2{
     color: rgba(255, 255, 255, 1);
     font-size: 36px;
     font-weight: 500;
     line-height: 47px;
-    padding-left: 450px;
-}
-.about-fp p{
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 33px;
-    color: rgba(255, 255, 255, 1);
+    padding-bottom: 15px;
 }
 
 /* MAIN MAN */
@@ -58,34 +74,7 @@
 }
 
 /* About Owner */
-#about-ministry{
-    width: auto;
-    height: auto;
-    background: linear-gradient(250.46deg, #3E3E3E 6.06%, #100A0C 42.39%, #070D2B 59.79%);
-    display: flex;
-    justify-content: center;
-}
-.about-church{
-    width: 80vw;
-    height: 500px;
-    text-align: center;
-    text-align-last: left;
-    margin-top: 80px;
-    margin-bottom: 80px;
-}
-.about-church h2{
-    color: rgba(255, 255, 255, 1);
-    font-size: 36px;
-    font-weight: 500;
-    line-height: 47px;
-    padding-left: 450px;
-}
-.about-church p{
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 33px;
-    color: rgba(255, 255, 255, 1);
-}
+
 
 /* Giving */
 #give{
@@ -103,7 +92,6 @@
 .content{
     width: auto;
     height: 400px;
-    background: rgba(0, 0, 0, 0.7);
     position: relative;
     align-items: center;
   text-align: center;
@@ -172,19 +160,6 @@
     #hero{
         width: auto;
     }
-    #about{
-        width: auto;
-        justify-content: center;
-    }
-    .about-fp{
-        width: 1152px !important;
-    }
-    #about-ministry{
-        width: auto;
-    }
-    .about-church{
-        width: 1152px !important;
-    }
     #give{
         width: auto;
     }
@@ -192,25 +167,6 @@
 @media screen and (max-width: 1024px) {
     #hero{
         width: auto;
-    }
-    #about{
-        width: auto;
-    }
-    .about-fp{
-        width: 920px !important;
-    }
-    .about-fp h2{
-        padding-left: 320px;
-    }
-    #about-ministry{
-        width: auto;
-    }
-    .about-church{
-        width: 920px !important;
-        padding-bottom: 20px;
-    }
-    .about-church h2{
-        padding-left: 350px;
     }
 }
 @media screen and (max-width: 920px) {
