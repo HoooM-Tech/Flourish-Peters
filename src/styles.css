@@ -7,3 +7,8 @@ body{
     width: 100vw;
     overflow-x: hidden;
 }
+
+@font-face {
+    font-family: 'PolySans-bulky';
+    src: url('../src/assets/fonts/PolySans-Bulky.ttf');
+}

@@ -27,7 +27,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: PolySans;
-    font-size: 48px;
+    font-size: 50px;
     font-style: normal;
     font-weight: 700;
     line-height: 65px;
@@ -39,12 +39,15 @@
     font-weight: 300;
     line-height: normal;
     opacity: 0.5;
+    padding-right: 15px;
 }
 .left button{
     width: 150px;
     height: 42px;
     display: flex;
     padding: 5px 5px;
+    margin-top: 15px;
+    margin-bottom: 10px;
     justify-content: center;
     align-items: center;
     gap: 5px;
@@ -54,6 +57,7 @@
 }
 .hero-text{
     padding-bottom: 10px;
+    padding-top: 15px;
 }
 .left img{
     margin-top: 15px;
@@ -67,16 +71,7 @@
 }
 
 /* ABOUT */
-.rol{
-    position: absolute;
-    top: 50px;
-    left: 0;
-}
-.starr{
-    position: absolute;
-    right: 50px;
-    top: 0;
-}
+
 .about-content{
     width: 100%;
     height: 100vh;
@@ -84,7 +79,6 @@
     padding: 20px;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -92,6 +86,7 @@
     display: flex;
     gap: 250px;
     margin-top: 100px;
+    flex-wrap: wrap;
 }
 .abt-left{
     width: 453px;
@@ -128,12 +123,16 @@
     background: url('/assets/mmt/Group3.png');
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
 }
 .whyjoin-mmt{
-    display: block;
+    display: flex;
+    flex-direction: column;
     padding-top: 100px;
-    margin-left: 120px;
     padding-bottom: 50px;
+    justify-content: center;
+    align-items: center;
 }  
 .wjm{
     color: rgba(7, 44, 80, 1);
@@ -157,7 +156,7 @@
 .desc-content{
     width: 920px;
     text-align: center;
-    margin-left: 150px;
+    /* margin-left: 150px; */
 }
 .desc-content h2{
     color: #072C50;
@@ -242,7 +241,10 @@
     background-repeat: no-repeat;
 }
 .whyregister{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding-top: 100px;
     padding-bottom: 50px;
 }
@@ -270,7 +272,8 @@
 .register-content{
     width: 920px;
     text-align: center;
-    margin-left: 150px;
+    justify-content: center;
+    align-items: center;
 }
 .register-content h2{
     color: #072C50;
@@ -405,15 +408,16 @@
     background-repeat: no-repeat;
 }
 .feedback{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding-top: 100px;
-    margin-left: 120px;
     padding-bottom: 50px;
 }
 .feedback-desc{
     width: 920px;
     text-align: center;
-    margin-left: 160px;
 }
 .testimonials{
     display: flex;
@@ -434,7 +438,7 @@
 .story{
     background: rgba(245, 245, 245, 0.94);
     padding: 15px;
-    width: 250px;
+    width: 250px !important;
     height: auto;
     border-radius: 10px;
 }
@@ -499,7 +503,7 @@
 /* RESPONSIVENESS */
 @media only screen and (max-width: 1440px) {
     #hero{
-        width: 1440px;
+        width: auto;
     }
     .hero-content{
         gap: 200px;
@@ -507,12 +511,10 @@
         margin-left: 80px;
     }
     .about-content{
-        width: 1440px;
+        width: auto;
     }
     .main-abt{
-        left: 0;
         gap: 200px;
-        margin-left: 25px;
     }
     .rol{
         right: 0;
@@ -520,12 +522,8 @@
     .why-join{
         width: 1440px;
     }
-    .whyjoin-mmt{
-        margin-left: 80px !important;
-    }
     .desc-content{
         width: 750px;
-        margin-left: 200px;
     }
     .register{
         width: 1440px;
@@ -533,7 +531,1403 @@
     #testimonial{
         width: 1440px;
     }
+    .testimonials{
+        width: 1200px;
+        gap: 20px;
+        overflow-x: hidden;
+    }
+    .feedback{
+        width: auto;
+    }
     #contact{
         width: 1440px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    #hero{
+        width: auto;
+    }
+    .hero-content{
+        width: auto;
+        margin-left: 1px;
+        gap: 150px;
+    }
+    .left{
+        margin-left: 20px;
+    }
+    .right{
+        margin-right: 20px;
+    }
+    .about-content{
+        width: 1280px;
+        justify-content: center;
+        align-items: center;
+        padding: 1px;
+
+    }
+    .abt-left{
+        margin-left: -20px;
+    }
+    .main-abt{
+        width: auto;
+        gap: 120px;
+    }
+    .abt-right{
+        width: 460px;
+        padding-right: 25px;
+    }
+    .why-join{
+        width: 1280px;
+        justify-content: center;
+    }
+    .desc-content{
+        width: 700px;
+    }
+    .cards{
+        width: 1000px;
+        overflow-x: scroll;
+    }
+    .register{
+        width: 1280px;
+        justify-content: center;
+    }
+    .register-content{
+        width: 700px;
+    }
+    .card-options{
+        margin-left: 10px;
+        width: 1140px;
+        overflow-x: scroll;
+    }
+    #testimonial{
+        width: 1280px;
+        justify-content: center;
+    }
+    .testimonials{
+        width: 1200px;
+        overflow-x: scroll;
+    }
+    #contact{
+        width: 1280px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about-content{
+        width: 1024px;
+        justify-content: center;
+        align-items: center;
+    }
+    .right{
+        width: 350px;
+        height: 350px;
+        margin-top: 15px;
+    }
+    .hero-content{
+        gap: 100px;
+    }
+    .why-join{
+        width: 1024px;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-abt{
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        padding-bottom: 100px;
+    }
+    .abt-left{
+        width: 350px;
+        height: 350px;
+        margin-top: 60px;
+    }
+    .register{
+        width: 1024px;
+        justify-content: center;
+        align-items: center
+    }
+    .card-options{
+        width: 850px;
+    }
+    #testimonial{
+        width: 1024px;
+        justify-content: center;
+        align-items: center
+    }
+    .testimonials{
+        width: 900px;
+        overflow-x: scroll;
+    }
+    .story{
+        width: 200px !important;
+    }
+    #contact{
+        width: 1024px;
+        justify-content: center;
+        align-items: center
+    }
+}
+@media screen and (max-width: 920px) {
+   #hero{
+    width: auto !important;
+    background: rgba(255, 255, 255, 1);
+   }
+   .hero-content{
+    width: 900px;
+    flex-wrap: wrap !important;
+    justify-content: center;
+    align-items: center;
+    margin-top: -160px;
+   }
+   .left{
+    width: 790px !important;
+    text-align: center;
+    align-items: center;
+   }
+   .left button{
+    margin-left: 320px;
+   }
+   .right{
+    width: 650px !important;
+   }
+   .about-content{
+    width: auto;
+    justify-content: center;
+   }
+   .main-abt{
+    width: 900px;
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+   }
+   .abt-left{
+    width: 650px;
+   }
+   .abt-right{
+    width: 650px;
+   }
+   .abt-right h2{
+    padding-bottom: 15px;
+   }
+   .why-join{
+    width: auto;
+    justify-content: center;
+   }
+   .cards{
+    width: 800px;
+   }
+   .register{
+    width: auto;
+    justify-content: center;
+   }
+   #testimonial{
+    width: auto;
+    justify-content: center;
+   }
+   .testimonials{
+    width: 900px !important;
+    overflow-x: scroll !important;
+   }
+   .testimonials .story{
+    width: 250px !important;
+   }
+   #contact{
+    width: auto;
+    justify-content: center;
+   }
+}
+
+@media screen and (max-width: 854px) {
+    #hero{
+        width: auto !important;
+        background: rgba(255, 255, 255, 1);
+       }
+       .hero-content{
+        width: 830px !important;
+        flex-wrap: wrap !important;
+        justify-content: center;
+        align-items: center;
+        margin-top: -160px;
+       }
+       .left{
+        width: 810px !important;
+        text-align: center;
+        align-items: center;
+        margin-left: 1px !important;
+       }
+       .left button{
+        margin-left: 320px;
+       }
+       .right{
+        width: 750px !important;
+       }
+       .about-content{
+        width: auto;
+        justify-content: center;
+       }
+       .main-abt{
+        width: 820px;
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+       }
+       .abt-left{
+        width: 800px !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-position: center !important;
+       }
+       .abt-right{
+        width: 750px;
+       }
+       .abt-right h2{
+        padding-bottom: 15px;
+       }
+       .why-join{
+        width: auto;
+        justify-content: center;
+       }
+       .cards{
+        width: 800px;
+        overflow-x: scroll;
+       }
+       .register{
+        width: auto;
+        justify-content: center;
+       }
+       .card-options{
+        width: 800px;
+       }
+       #testimonial{
+        width: auto;
+        justify-content: center;
+       }
+       .testimonials{
+        width: 800px !important;
+        overflow-x: scroll !important;
+       }
+       .testimonials .story{
+        width: auto !important;
+       }
+       #contact{
+        width: auto;
+        justify-content: center;
+       }
+}
+
+@media screen and (max-width: 768px) {
+    #hero{
+        width: auto !important;
+        background: rgba(255, 255, 255, 1);
+        padding-bottom: 250px;
+    }
+       .hero-content{
+        width: 750px !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin-top: -85px;
+       }
+       .left{
+        width: 750px !important;
+        text-align: center;
+        align-items: center;
+        margin-left: 1px !important;
+       }
+       .left h1{
+        padding-top: 10px;
+       }
+       .left button{
+        margin-left: 300px;
+       }
+       .right{
+        width: 700px !important;
+        margin-top: -35px;
+        height: 300px;
+        background-position: center;
+        margin-right: 1px;
+       }
+       .about-content{
+        width: auto;
+        justify-content: center;
+        padding-top: 100px;
+        padding-bottom: 220px;
+       }
+       .main-abt{
+        width: 720px;
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+       }
+       .abt-left{
+        width: 710px !important;
+        margin-top: 150px;
+        margin-left: 2px;
+       }
+       .abt-right{
+        width: 710px;
+       }
+       .abt-right h2{
+        padding-bottom: 15px;
+       }
+       .why-join{
+        width: auto;
+        justify-content: center;
+       }
+       .cards{
+        width: 680px;
+        overflow-x: scroll;
+       }
+       .card-options{
+        width: 700px;
+       }
+       .register{
+        width: auto;
+        justify-content: center;
+       }
+       #testimonial{
+        width: auto;
+        justify-content: center;
+       }
+       .testimonials{
+        width: 700px !important;
+        overflow-x: scroll !important;
+       }
+       .testimonials .story{
+        width: auto !important;
+       }
+       #contact{
+        width: auto;
+        justify-content: center;
+       }
+}
+
+@media screen and (max-width: 540px) {
+    #hero{
+        width: auto !important;
+        background: rgba(255, 255, 255, 1);
+        padding-bottom: 250px;
+    }
+       .hero-content{
+        width: 520px !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin-top: -85px;
+       }
+       .left{
+        width: 510px !important;
+        text-align: center;
+        align-items: center;
+        margin-left: 1px !important;
+       }
+       .left h1{
+        padding-top: 10px;
+       }
+       .left button{
+        margin-left: 180px;
+       }
+       .right{
+        width: 500px !important;
+        margin-top: -35px;
+        height: 300px;
+        background-position: center;
+        margin-right: 1px;
+       }
+       .about-content{
+        width: auto;
+        justify-content: center;
+        padding-top: 100px;
+        padding-bottom: 220px;
+       }
+       .main-abt{
+        width: 520px;
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+       }
+       .abt-left{
+        width: 510px !important;
+        margin-top: 150px;
+        margin-left: 2px;
+       }
+       .desc-content{
+        width: 500px;
+       }
+       .register-content{
+        width: 500px;
+       }
+       .feedback-desc{
+        width: 500px;
+       }
+       .abt-right{
+        width: 500px;
+        padding-left: 20px;
+       }
+       .abt-right h2{
+        padding-bottom: 15px;
+       }
+       .why-join{
+        width: auto;
+        justify-content: center;
+       }
+       .cards{
+        width: 500px;
+        overflow-x: scroll;
+       }
+       .card-options{
+        width: 500px;
+       }
+       .register{
+        width: auto;
+        justify-content: center;
+       }
+       #testimonial{
+        width: auto;
+        justify-content: center;
+       }
+       .testimonials{
+        width: 500px !important;
+        overflow-x: scroll !important;
+       }
+       .testimonials .story{
+        width: auto !important;
+       }
+       #contact{
+        width: auto;
+        justify-content: center;
+       }
+}
+
+@media screen and (max-width: 431px) {
+    #hero{
+        width: auto !important;
+        background: rgba(255, 255, 255, 1);
+        padding-bottom: 100px;
+    }
+       .hero-content{
+        width: 410px !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin-top: -120px;
+       }
+       .left{
+        width: 400px !important;
+        text-align: center;
+        align-items: center;
+        margin-left: 1px !important;
+       }
+       .left h1{
+        padding-top: 10px;
+        font-size: 45px !important;
+       }
+       .left button{
+        margin-left: 130px;
+       }
+       .right{
+        width: 400px !important;
+        margin-top: -35px;
+        height: 300px;
+        background-position: center;
+        margin-right: 1px;
+        margin-left: 10px;
+       }
+       .about-content{
+        width: auto;
+        justify-content: center;
+        padding-top: 100px;
+        padding-bottom: 220px;
+       }
+       .main-abt{
+        width: 410px;
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+       }
+       .abt-left{
+        width: 400px !important;
+        margin-top: 150px;
+        margin-left: 2px;
+       }
+       .desc-content{
+        width: 400px;
+       }
+       .desc-content p{
+        line-height: 27px;
+       }
+       .register-content p{
+        line-height: 27px;
+       }
+       .feedback-desc p{
+        line-height: 27px;
+       }
+       .register-content{
+        width: 400px;
+       }
+       .feedback-desc{
+        width: 400px;
+       }
+       .abt-right{
+        width: 400px;
+        padding-left: 25px;
+        padding-right: 25px;
+       }
+       .abt-right h2{
+        padding-bottom: 15px;
+        font-size: 27px;
+        text-align-last: center !important;
+       }
+       .abt-h2{
+        width: 400px;
+        text-align: center !important;
+        text-align-last: center !important;
+       }
+       .why-join{
+        width: auto;
+        justify-content: center;
+       }
+       .cards{
+        width: 410px;
+        overflow-x: scroll;
+       }
+       .card-options{
+        width: 400px;
+        display: flex;
+        flex-direction: column !important;
+        align-content: center;
+        align-items: center;
+        margin-left: 1px !important;
+       }
+       .register{
+        width: auto;
+        justify-content: center;
+       }
+       #testimonial{
+        width: auto;
+        justify-content: center;
+       }
+       .testimonials{
+        width: 400px !important;
+        overflow-x: scroll !important;
+       }
+       .testimonials .story{
+        width: auto !important;
+       }
+       #contact{
+        width: auto;
+        justify-content: center;
+   }
+}
+
+@media screen and (max-width: 415px) {
+    #hero{
+        width: auto !important;
+        background: rgba(255, 255, 255, 1);
+        padding-bottom: 100px;
+    }
+       .hero-content{
+        width: 400px !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin-top: -110px;
+       }
+       .left{
+        width: 390px !important;
+        text-align: center;
+        align-items: center;
+        margin-left: 1px !important;
+       }
+       .left h1{
+        padding-top: 10px;
+        font-size: 45px !important;
+       }
+       .left button{
+        margin-left: 130px;
+       }
+       .right{
+        width: 380px !important;
+        margin-top: -35px;
+        height: 300px;
+        background-position: center;
+        margin-right: 1px;
+        margin-left: 10px;
+       }
+       .about-content{
+        width: auto;
+        justify-content: center;
+        padding-top: 100px;
+        padding-bottom: 220px;
+       }
+       .main-abt{
+        width: 390px;
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+       }
+       .abt-left{
+        width: 390px !important;
+        margin-top: 150px;
+        margin-left: 2px;
+       }
+       .desc-content{
+        width: 390px;
+       }
+       .desc-content p{
+        line-height: 27px;
+       }
+       .register-content p{
+        line-height: 27px;
+       }
+       .feedback-desc p{
+        line-height: 27px;
+       }
+       .register-content{
+        width: 390px;
+       }
+       .feedback-desc{
+        width: 390px;
+       }
+       .abt-right{
+        width: 380px;
+        padding-left: 20px;
+       }
+       .abt-right h2{
+        padding-bottom: 15px;
+        font-size: 27px !important;
+       }
+       .abt-right p{
+        line-height: 27px;
+       }
+       .why-join{
+        width: auto;
+        justify-content: center;
+       }
+       .cards{
+        width: 380px;
+        overflow-x: scroll;
+       }
+       .card-options{
+        width: 380px;
+       }
+       .register{
+        width: auto;
+        justify-content: center;
+       }
+       #testimonial{
+        width: auto;
+        justify-content: center;
+       }
+       .testimonials{
+        width: 380px !important;
+        overflow-x: scroll !important;
+       }
+       .testimonials .story{
+        width: auto !important;
+       }
+       #contact{
+        width: auto;
+        justify-content: center;
+   }
+   .contact-mmt{
+    width: 380px;
+   }
+}
+@media screen and (max-width: 391px) {
+    #hero{
+        width: auto !important;
+        background: rgba(255, 255, 255, 1);
+        padding-bottom: 100px;
+    }
+       .hero-content{
+        width: 380px !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin-top: -110px;
+       }
+       .left{
+        width: 380px !important;
+        text-align: center;
+        align-items: center;
+        margin-left: 1px !important;
+       }
+       .left h1{
+        padding-top: 10px;
+        font-size: 45px !important;
+       }
+       .left button{
+        margin-left: 130px;
+       }
+       .right{
+        width: 370px !important;
+        margin-top: -35px;
+        height: 300px;
+        background-position: center;
+        margin-right: 1px;
+        margin-left: 10px;
+       }
+       .about-content{
+        width: auto;
+        justify-content: center;
+        padding-top: 100px;
+        padding-bottom: 220px;
+       }
+       .main-abt{
+        width: 380px;
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+       }
+       .abt-left{
+        width: 370px !important;
+        margin-top: 150px;
+        margin-left: 2px;
+       }
+       .desc-content{
+        width: 370px;
+       }
+       .desc-content p{
+        line-height: 27px;
+       }
+       .register-content p{
+        line-height: 27px;
+       }
+       .feedback-desc p{
+        line-height: 27px;
+       }
+       .register-content{
+        width: 370px;
+       }
+       .feedback-desc{
+        width: 370px;
+       }
+       .abt-right{
+        width: 370px;
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+       }
+       .abt-h2{
+        width: 360px;
+        text-align: center !important;
+        text-align-last: center !important;
+       }
+       .abt-right h2{
+        padding-bottom: 15px;
+        text-align: center;
+       }
+       .why-join{
+        width: auto;
+        justify-content: center;
+       }
+       .cards{
+        width: 370px;
+        overflow-x: scroll;
+       }
+       .card-options{
+        width: 370px;
+        display: flex;
+        flex-direction: column !important;
+        align-content: center;
+        align-items: center;
+       }
+       .register{
+        width: auto;
+        justify-content: center;
+        background: rgba(245, 245, 245, 0.94) !important;
+       }
+       #testimonial{
+        width: auto;
+        justify-content: center;
+       }
+       .testimonials{
+        width: 370px !important;
+        overflow-x: scroll !important;
+       }
+       .testimonials .story{
+        width: auto !important;
+       }
+       #contact{
+        width: auto;
+        justify-content: center;
+   }
+   .contact-mmt{
+    width: 370px;
+   }
+}
+@media screen and (max-width: 376px) {
+    #hero{
+        width: auto !important;
+        background: rgba(255, 255, 255, 1);
+        padding-bottom: 100px;
+    }
+       .hero-content{
+        width: 360px !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin-top: -80px !important;
+       }
+       .left{
+        width: 355px !important;
+        text-align: center;
+        align-items: center;
+        margin-left: 1px !important;
+       }
+       .left h1{
+        padding-top: 10px;
+        font-size: 40px !important;
+       }
+       .left button{
+        margin-left: 105px;
+       }
+       .right{
+        width: 350px !important;
+        margin-top: -35px;
+        height: 300px;
+        background-position: center;
+        margin-right: 1px;
+        margin-left: 10px;
+       }
+       .about-content{
+        width: auto;
+        justify-content: center;
+        padding-top: 100px;
+        padding-bottom: 340px;
+       }
+       .main-abt{
+        width: 360px;
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+       }
+       .abt-left{
+        width: 355px !important;
+        margin-top: 150px;
+        margin-left: 2px;
+       }
+       .desc-content{
+        width: 360px;
+       }
+       .desc-content{
+        padding-top: 80px;
+       }
+       .desc-content p{
+        line-height: 27px;
+       }
+       .register-content p{
+        line-height: 27px;
+       }
+       .feedback-desc p{
+        line-height: 27px;
+       }
+       .register-content{
+        width: 360px;
+       }
+       .feedback-desc{
+        width: 360px;
+       }
+       .abt-right{
+        width: 350px;
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+       }
+       .abt-h2{
+        width: 360px;
+        text-align: center !important;
+        text-align-last: center !important;
+       }
+       .abt-right h2{
+        padding-bottom: 15px;
+        text-align: center;
+       }
+       .why-join{
+        width: auto;
+        justify-content: center;
+       }
+       .cards{
+        width: 360px;
+        overflow-x: scroll;
+       }
+       .card-options .option1{
+        width: 320px !important;
+        padding: 20px !important;
+       }
+       .card-options .option2{
+        width: 320px !important;
+        padding: 15px !important;
+       }
+       .card-options .option1 button{
+        width: 320px !important;
+       }
+       .card-options .option2 button{
+        width: 320px !important;
+       }
+       .card-options{
+        width: 360px;
+        display: flex;
+        flex-direction: column !important;
+        align-content: center;
+        align-items: center;
+       }
+       .register{
+        width: auto;
+        justify-content: center;
+        background: rgba(245, 245, 245, 0.94) !important;
+       }
+       #testimonial{
+        width: auto;
+        justify-content: center;
+       }
+       .testimonials{
+        width: 360px !important;
+        overflow-x: scroll !important;
+       }
+       .testimonials .story{
+        width: auto !important;
+       }
+       #contact{
+        width: auto;
+        justify-content: center;
+   }
+   .contact-mmt{
+    width: 360px;
+   }
+}
+@media screen and (max-width: 361px) {
+    #hero{
+        width: auto !important;
+        background: rgba(255, 255, 255, 1);
+        padding-bottom: 200px;
+    }
+       .hero-content{
+        width: 350px !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin-top: -100px !important;
+       }
+       .left{
+        width: 350px !important;
+        text-align: center;
+        align-items: center;
+        margin-left: 1px !important;
+       }
+       .left h1{
+        padding-top: 10px;
+        font-size: 40px !important;
+       }
+       .left button{
+        margin-left: 105px;
+       }
+       .right{
+        width: 350px !important;
+        margin-top: -35px;
+        height: 300px;
+        background-position: center;
+        margin-right: 1px;
+        margin-left: 10px;
+       }
+       .about-content{
+        width: auto;
+        justify-content: center;
+        padding-top: 100px;
+        padding-bottom: 340px;
+       }
+       .main-abt{
+        width: 350px;
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+       }
+       .abt-left{
+        width: 350px !important;
+        margin-top: 350px;
+        margin-left: 1px;
+       }
+       .desc-content{
+        width: 350px;
+       }
+       .desc-content{
+        padding-top: 80px;
+       }
+       .desc-content p{
+        line-height: 27px;
+       }
+       .card-options .option1{
+        width: 300px !important;
+        padding: 20px !important;
+       }
+       .card-options .option2{
+        width: 300px !important;
+        padding: 15px !important;
+       }
+       .card-options .option1 button{
+        width: 300px !important;
+       }
+       .card-options .option2 button{
+        width: 300px !important;
+       }
+       .register-content p{
+        line-height: 27px;
+       }
+       .feedback-desc p{
+        line-height: 27px;
+       }
+       .register-content{
+        width: 350px;
+       }
+       .feedback-desc{
+        width: 350px;
+       }
+       .abt-right{
+        width: 350px;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+       }
+       .abt-h2{
+        width: 320px;
+        text-align: center !important;
+        text-align-last: center !important;
+       }
+       .abt-right h2{
+        padding-bottom: 15px;
+        text-align: center;
+       }
+       .why-join{
+        width: auto;
+        justify-content: center;
+       }
+       .cards{
+        width: 350px;
+        overflow-x: scroll;
+       }
+       .card-options{
+        width: 350px;
+        display: flex;
+        flex-direction: column !important;
+        align-content: center;
+        align-items: center;
+       }
+       .register{
+        width: auto;
+        justify-content: center;
+        background: rgba(245, 245, 245, 0.94) !important;
+       }
+       #testimonial{
+        width: auto;
+        justify-content: center;
+       }
+       .testimonials{
+        width: 350px !important;
+        overflow-x: scroll !important;
+       }
+       .testimonials .story{
+        width: auto !important;
+       }
+       #contact{
+        width: auto;
+        justify-content: center;
+   }
+        .contact-mmt{
+            width: 350px;
+    }
+
+}
+@media screen and (max-width: 345px) {
+    #hero{
+        width: auto !important;
+        background: rgba(255, 255, 255, 1);
+        padding-bottom: 200px;
+    }
+       .hero-content{
+        width: 335px !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin-top: -100px !important;
+       }
+       .left{
+        width: 335px !important;
+        text-align: center;
+        align-items: center;
+        margin-left: 1px !important;
+       }
+       .left h1{
+        padding-top: 10px;
+        font-size: 40px !important;
+       }
+       .left button{
+        margin-left: 105px;
+       }
+       .right{
+        width: 335px !important;
+        margin-top: -35px;
+        height: 300px;
+        background-position: center;
+        margin-right: 1px;
+        margin-left: 10px;
+       }
+       .about-content{
+        width: auto;
+        justify-content: center;
+        padding-top: 100px;
+        padding-bottom: 340px;
+       }
+       .main-abt{
+        width: 335px;
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+       }
+       .abt-left{
+        width: 335px !important;
+        margin-top: 350px;
+        margin-left: 1px;
+       }
+       .desc-content{
+        width: 335px;
+       }
+       .desc-content{
+        padding-top: 80px;
+       }
+       .desc-content p{
+        line-height: 27px;
+       }
+       .card-options .option1{
+        width: 280px !important;
+        padding: 20px !important;
+       }
+       .card-options .option2{
+        width: 280px !important;
+        padding: 15px !important;
+       }
+       .card-options .option1 button{
+        width: 280px !important;
+       }
+       .card-options .option2 button{
+        width: 280px !important;
+       }
+       .register{
+        background: rgba(245, 245, 245, 0.94) !important;
+       }
+       .register-content p{
+        line-height: 27px;
+       }
+       .feedback-desc p{
+        line-height: 27px;
+       }
+       .register-content{
+        width: 335px;
+       }
+       .feedback-desc{
+        width: 335px;
+       }
+       .abt-right{
+        width: 335px;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+       }
+       .abt-h2{
+        width: 320px;
+        text-align: center !important;
+        text-align-last: center !important;
+       }
+       .abt-right h2{
+        padding-bottom: 15px;
+        text-align: center;
+       }
+       .why-join{
+        width: auto;
+        justify-content: center;
+       }
+       .cards{
+        width: 335px;
+        overflow-x: scroll;
+       }
+       .card-options{
+        width: 335px;
+        display: flex;
+        flex-direction: column !important;
+        align-content: center;
+        align-items: center;
+       }
+       .register{
+        width: auto;
+        justify-content: center;
+       }
+       #testimonial{
+        width: auto;
+        justify-content: center;
+       }
+       .testimonials{
+        width: 335px !important;
+        overflow-x: scroll !important;
+       }
+       .testimonials .story{
+        width: auto !important;
+       }
+       #contact{
+        width: auto;
+        justify-content: center;
+   }
+        .contact-mmt{
+            width: 335px;
+    }
+}
+@media screen and (max-width: 321px) {
+    #hero{
+        width: auto !important;
+        background: rgba(255, 255, 255, 1);
+        padding-bottom: 200px;
+    }
+       .hero-content{
+        width: 305px !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin-top: -100px !important;
+       }
+       .left{
+        width: 305px !important;
+        text-align: center;
+        align-items: center;
+        margin-left: 1px !important;
+       }
+       .left h1{
+        padding-top: 10px;
+        font-size: 40px !important;
+       }
+       .left button{
+        margin-left: 105px;
+       }
+       .right{
+        width: 305px !important;
+        margin-top: -35px;
+        height: 300px;
+        background-position: center;
+        margin-right: 1px;
+        margin-left: 10px;
+       }
+       .about-content{
+        width: auto;
+        justify-content: center;
+        padding-top: 100px;
+        padding-bottom: 340px;
+       }
+       .main-abt{
+        width: 305px;
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+       }
+       .abt-left{
+        width: 305px !important;
+        margin-top: 350px;
+        margin-left: 1px;
+       }
+       .desc-content{
+        width: 305px;
+       }
+       .desc-content{
+        padding-top: 80px;
+       }
+       .desc-content p{
+        line-height: 27px;
+       }
+       .card-options .option1{
+        width: 260px !important;
+        padding: 20px !important;
+       }
+       .card-options .option2{
+        width: 260px !important;
+        padding: 15px !important;
+       }
+       .card-options .option1 button{
+        width: 260px !important;
+       }
+       .card-options .option2 button{
+        width: 260px !important;
+       }
+       .register{
+        background: rgba(245, 245, 245, 0.94) !important;
+       }
+       .register-content p{
+        line-height: 27px;
+       }
+       .feedback-desc p{
+        line-height: 27px;
+       }
+       .register-content{
+        width: 305px;
+       }
+       .feedback-desc{
+        width: 305px;
+       }
+       .abt-right{
+        width: 305px;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+       }
+       .abt-h2{
+        width: 300px;
+        text-align: center !important;
+        text-align-last: center !important;
+       }
+       .abt-right h2{
+        padding-bottom: 15px;
+        text-align: center;
+       }
+       .why-join{
+        width: auto;
+        justify-content: center;
+       }
+       .cards{
+        width: 305px;
+        overflow-x: scroll;
+       }
+       .card-options{
+        width: 305px;
+        display: flex;
+        flex-direction: column !important;
+        align-content: center;
+        align-items: center;
+       }
+       .register{
+        width: auto;
+        justify-content: center;
+       }
+       #testimonial{
+        width: auto;
+        justify-content: center;
+       }
+       .testimonials{
+        width: 305px !important;
+        overflow-x: scroll !important;
+       }
+       .testimonials .story{
+        width: auto !important;
+       }
+       #contact{
+        width: auto;
+        justify-content: center;
+   }
+        .contact-mmt{
+        width: 305px;
     }
 }

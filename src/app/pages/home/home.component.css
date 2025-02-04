@@ -78,7 +78,27 @@ div.center-text {
 }
 .center-img {
   margin-top: 85px;
+  animation: scrollAnimation 1.5s infinite ease-in-out;
 }
+
+/* ANIMATION */
+
+@keyframes scrollAnimation {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(5px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10px);
+    opacity: 0.5;
+  }
+}
+
+
 
 /* Be Inspired */
 #shop {
@@ -1099,7 +1119,7 @@ div.center-text {
     overflow-y: hidden;
   }
   .center-text{
-    margin-top: -150px !important;
+    margin-top: -120px !important;
     width: 400px !important;
     text-align: center !important;
     justify-content: center !important;
@@ -1107,7 +1127,7 @@ div.center-text {
   }
   .center-text h1{
     font-size: 40px !important;
-    line-height: 45px !important;
+    line-height: 65px !important;
   }
   .center-text strong{
     font-size: 40px !important;
@@ -1116,12 +1136,19 @@ div.center-text {
   .hero-button{
     flex-direction: column !important;
     margin-left: 80px;
+    margin-top: 20px !important;
   }
   .center-img{
-    margin-top: 100px !important;
+    margin-top: 80px !important;
   }
   .hero-button button{
     width: 250px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    align-self: stretch;
+  }
+  .explore{
+    margin-bottom: 15px !important;
   }
   #shop{
     width: auto !important;
@@ -1133,6 +1160,7 @@ div.center-text {
     justify-content: center !important;
     align-items: center !important;
     flex-wrap: wrap !important;
+    margin-left: 2px !important;
   }
   .shop-left{
     width: 420px !important;
@@ -1148,12 +1176,13 @@ div.center-text {
     width: 400px !important;
     flex-wrap: nowrap !important;
     overflow-x: scroll;
+    gap: 50px !important;
   }
   .book{
     margin-left: 1px !important;
   }
   .book1{
-    margin-left: 300px !important;
+    margin-left: 400px !important;
   }
   #teachings{
     width: auto !important;
@@ -1185,7 +1214,7 @@ div.center-text {
     display: none !important;
   }
   .message1{
-    margin-left: 300px !important;
+    margin-left: 350px !important;
   }
   .sermons{
     width: 400px !important;
@@ -1202,6 +1231,7 @@ div.center-text {
     width: auto !important;
     justify-content: center !important;
     align-items: center !important;
+    margin-left: 2px !important;
   }
   .event-left{
     margin-left: 20px;
@@ -1224,7 +1254,7 @@ div.center-text {
     overflow-x: scroll;
   }
   .precept1{
-    margin-left: 300px !important;
+    margin-left: 500px !important;
   }
   #testimonial{
     width: auto !important;
@@ -1240,13 +1270,14 @@ div.center-text {
   .story-text{
     width: 380px !important;
     text-align: center !important;
+    text-align-last: center !important;
   }
   .story-text h2{
     font-size: 30px !important;
   }
 
   .testimonials{
-    width: 400px !important;
+    width: auto !important;
     flex-wrap: nowrap !important;
     overflow-x: scroll;
   }
@@ -1326,6 +1357,15 @@ div.center-text {
     width: 350px !important;
     text-align: center !important;
   }
+  .book1{
+    margin-left: 450px !important;
+  }
+  .message1{
+    margin-left: 350px !important;
+  }
+  .precept1{
+    margin-left: 650px !important;
+  }
   .message-left{
     width: 350px !important;
     text-align: center !important;
@@ -1390,6 +1430,9 @@ div.center-text {
     width: 310px !important;
     text-align: center !important;
   }
+  .message1{
+    margin-left: 400px !important;
+  }
   .message-left{
     width: 310px !important;
     text-align: center !important;
@@ -1397,6 +1440,10 @@ div.center-text {
   .event-left{
     width: 310px !important;
     text-align: center !important;
+  }
+  .testimonials{
+    width: 360px !important;
+    overflow-x: scroll;
   }
   .story-text{
     width: 310px !important;
@@ -1430,6 +1477,9 @@ div.center-text {
   }
   .event-left h2{
     font-size: 30px !important;
+  }
+  .message1{
+    margin-left: 400px !important;
   }
   .story-text h2{
     font-size: 30px !important;
@@ -1470,13 +1520,17 @@ div.center-text {
   .event-content{
     padding-top: 80px !important;
   }
+  .testimonials{
+    width: 344px !important;
+    overflow-x: scroll;
+  }
   .testimonial-content{
     margin-top: 80px !important;
   }
 }
 @media screen and (max-width: 321px) {
   .center-text{
-    margin-top: 10px !important;
+    margin-top: 50px !important;
   }
   .story-text{
     width: 300px !important;
@@ -1490,6 +1544,12 @@ div.center-text {
   .shop-left{
     width: 300px !important;
   }
+  .book1{
+    margin-left: 480px !important;
+  }
+  .message1{
+    margin-left: 450px !important;
+  }
   .new-mmt{
     display: block !important;
     width: 320px !important;
@@ -1497,6 +1557,10 @@ div.center-text {
   .get-event{
     /* padding-left: 20px !important; */
     margin-left: 30px !important;
+  }
+  .testimonials{
+    width: 320px !important;
+    overflow-x: scroll;
   }
   .story-text{
     width: 300px !important;

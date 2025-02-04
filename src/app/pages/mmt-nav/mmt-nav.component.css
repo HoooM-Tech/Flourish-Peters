@@ -30,7 +30,36 @@
 }
 
 @media screen and (max-width: 1440px) {
-    nav{
+    header{
         width: 1440px !important;
+    }
+}
+@media screen and (max-width: 1280px) {
+    header {
+      width: 1280px;
+    }
+  }
+@media screen and (max-width: 1024px) {
+    header {
+      width: 1024px;
+    }
+}
+@media screen and (min-width: 200px) and (max-width: 931px){
+    header{
+        width: auto !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        /* padding: 0 10px; */
+    }
+    .left{
+        width: auto !important;
+        margin-left: 5px !important;
+    }
+    .left img{
+        width: 56px !important;
+        height: 72px !important;
+    }
+    .right{
+        margin-right: 5px !important;
     }
 }
