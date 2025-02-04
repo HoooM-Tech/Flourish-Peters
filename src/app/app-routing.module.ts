@@ -15,7 +15,7 @@ const routes: Routes = [
   {path: 'contact-us', component: ContactComponent},
   {path: 'our-events', component: EventsComponent},
   {path: 'support', component: GiveComponent},
-  {path: 'join-mmt', component: MmtComponent}
+  // {path: 'join-mmt', component: MmtComponent}
 ];
 
 @NgModule({

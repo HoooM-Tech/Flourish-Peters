@@ -9,6 +9,16 @@ body{
 }
 
 @font-face {
-    font-family: 'PolySans-bulky';
-    src: url('../src/assets/fonts/PolySans-Bulky.ttf');
+    font-family: 'PolySans-Neutral';
+    src: url('../src/assets/fonts/PolySans-Neutral.ttf');
 }
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for Internet Explorer, Edge, and Firefox */
+  .hide-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
