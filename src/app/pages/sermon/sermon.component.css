@@ -1,0 +1,94 @@
+#hero{
+    width: auto;
+    height: 60vh;
+    background: url('/assets/sermon/sermon-hero.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.center-text{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 42%;
+}
+.center-text h1{
+    color: rgba(255, 255, 255, 1);
+    font-size: 80px;
+    line-height: 90.2px;
+    font-weight: 400;
+}
+
+
+/* RESPONSIVENESS */
+@media screen and (max-width: 1440px) {
+    #hero{
+        width: 1440px;
+    }
+}
+@media screen and (max-width: 1280px) {
+    #hero{
+        width: auto;
+    }
+}
+@media screen and (max-width: 1024px) {
+    #hero{
+        width: auto;
+    }
+}
+@media screen and (max-width: 920px) {
+    #hero{
+        width: auto;
+    }
+}
+@media screen and (max-width: 854px) {
+    #hero{
+        width: auto;
+    }
+}
+@media screen and (max-width: 768px) {
+    .center-text{
+        width: auto;
+        left: 300px;
+    }
+}
+@media screen and (max-width: 540px) {
+    #hero{
+        width: auto;
+    }
+    .center-text{
+        left: 180px !important;
+    }
+}
+@media screen and (max-width: 431px) {
+    #hero{
+        width: auto;
+    }
+    .center-text{
+        width: auto;
+        left: 140px !important;
+    }
+    .center-text h1{
+        font-size: 60px !important;
+    }
+}
+@media screen and (max-width: 414px) {
+    
+}
+@media screen and (max-width: 391px) {
+    .center-text{
+        left: 120px !important;
+    }
+}
+@media screen and (max-width: 376px) {
+}
+@media screen and (max-width: 360px) {
+    .center-text{
+        left: 100px !important;
+    }
+}
+@media screen and (max-width: 321px) {
+    .center-text{
+        left: 80px !important;
+    }
+}

@@ -7,6 +7,7 @@ import { EventsComponent } from './pages/events/events.component';
 import { GiveComponent } from './pages/give/give.component';
 import { ShopComponent } from './pages/shop/shop.component';
 import { MmtComponent } from './pages/mmt/mmt.component';
+import { SermonComponent } from './pages/sermon/sermon.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'contact-us', component: ContactComponent},
   {path: 'our-events', component: EventsComponent},
   {path: 'support', component: GiveComponent},
-  {path: 'much-more-tribe', component: MmtComponent}
+  {path: 'much-more-tribe', component: MmtComponent},
+  {path: 'sermon', component: SermonComponent}
 ];
 
 @NgModule({
