@@ -10,7 +10,7 @@ import { SermonService } from 'src/app/services/sermon.service';
 export class SermonComponent {
   teachings: Sermons[] = [];
     currentPage: number = 1;
-    pageSize: number = 5;
+    pageSize: number = 9;
     totalBlogs: number = 0;
 
     constructor(private sermonService: SermonService){}

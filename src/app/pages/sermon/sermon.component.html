@@ -8,6 +8,26 @@
     </section>
 
     <!-- Sermons -->
+     <section id="sermons-preview">
+        <div class="sermons-shortlink">
+            <div id="sermon_section">
+                <div class="serms" *ngFor="let sermon of teachings" routerLink="/blog/{{sermon.id}}">
+                    <img [src]="sermon.SermonPreview" alt="">
+                    <div class="text">
+                        <p>{{sermon.description}}-</p>
+                        <p><strong>{{sermon.PreacherName}}</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <button class="num" (click)="prevPage()" [disabled]="currentPage === 1">1</button>
+                <p>Of</p>
+                <button class="num" (click)="nextPage()" [disabled]="currentPage * pageSize >= totalBlogs">21</button>
+                <button class="page-btn" (click)="nextPage()" [disabled]="currentPage * pageSize >= totalBlogs">Next</button>
+            </div>
+        </div>
+     </section>
 
     <!-- Footer -->
      <app-footer></app-footer>

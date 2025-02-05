@@ -11,55 +11,55 @@ export class SermonService {
         id: 1,
         description: 'Spirit of Prayer',
         PreacherName: 'Apostle Flourish Peters',
-        SermonPreview: '/assets/sermons/img1.png'
+        SermonPreview: 'assets/sermon/img1.png'
     },
     {
       id: 2,
       description: 'Spirit of Prayer',
       PreacherName: 'Apostle Flourish Peters',
-      SermonPreview: '/assets/sermons/img2.png'
+      SermonPreview: 'assets/sermon/img2.png'
   },
   {
     id: 3,
     description: 'Spirit of Prayer',
     PreacherName: 'Apostle Flourish Peters',
-    SermonPreview: '/assets/sermons/img3.png'
+    SermonPreview: 'assets/sermon/img3.png'
   },
   {
     id: 4,
     description: 'Spirit of Prayer',
     PreacherName: 'Apostle Flourish Peters',
-    SermonPreview: '/assets/sermons/img4.png'
+    SermonPreview: 'assets/sermon/img4.png'
   },
   {
     id: 5,
     description: 'Spirit of Prayer',
     PreacherName: 'Apostle Flourish Peters',
-    SermonPreview: '/assets/sermons/img5.png'
+    SermonPreview: 'assets/sermon/img5.png'
   },
   {
     id: 6,
     description: 'Spirit of Prayer',
     PreacherName: 'Apostle Flourish Peters',
-    SermonPreview: '/assets/sermons/img6.png'
+    SermonPreview: 'assets/sermon/img6.png'
   },
   {
     id: 7,
     description: 'Spirit of Prayer',
     PreacherName: 'Apostle Flourish Peters',
-    SermonPreview: '/assets/sermons/img7.png'
+    SermonPreview: 'assets/sermon/img7.png'
   },
   {
     id: 8,
     description: 'Spirit of Prayer',
     PreacherName: 'Apostle Flourish Peters',
-    SermonPreview: '/assets/sermons/img8.png'
+    SermonPreview: 'assets/sermon/img8.png'
   },
   {
     id: 9,
     description: 'Spirit of Prayer',
     PreacherName: 'Apostle Flourish Peters',
-    SermonPreview: '/assets/sermons/img9.png'
+    SermonPreview: 'assets/sermon/img9.png'
   }
 ]
 
