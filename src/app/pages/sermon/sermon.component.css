@@ -42,7 +42,7 @@
 .serms{
     width: 320px;
     color: rgba(255, 255, 255, 1);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 .serms img{
     width: 300px;
@@ -98,17 +98,33 @@
 @media screen and (max-width: 920px) {
     #hero{
         width: auto;
+        background-position: center !important;
+    }
+}
+@media screen and (max-width: 912px) {
+    .center-text{
+        left: 300px !important;
+    }
+    #sermon_section{
+        width: 800px;
     }
 }
 @media screen and (max-width: 854px) {
     #hero{
         width: auto;
     }
+    .center-text{
+        left: 280px !important;
+    }
 }
 @media screen and (max-width: 768px) {
     .center-text{
         width: auto;
-        left: 300px;
+        left: 300px !important;
+    }
+    
+    #sermon_section{
+        width: 700px !important;
     }
 }
 @media screen and (max-width: 540px) {
@@ -116,7 +132,14 @@
         width: auto;
     }
     .center-text{
-        left: 180px !important;
+        left: 150px !important;
+    }
+    .serms{
+        margin-bottom: 25px;
+    }
+    
+    #sermon_section{
+        width: 450px !important;
     }
 }
 @media screen and (max-width: 431px) {
@@ -125,10 +148,14 @@
     }
     .center-text{
         width: auto;
-        left: 140px !important;
+        left: 120px !important;
     }
     .center-text h1{
         font-size: 60px !important;
+    }
+    
+    #sermon_section{
+        width: 350px !important;
     }
 }
 @media screen and (max-width: 414px) {
@@ -136,18 +163,32 @@
 }
 @media screen and (max-width: 391px) {
     .center-text{
-        left: 120px !important;
+        left: 100px !important;
+    }
+    #sermon_section{
+        width: 320px !important;
     }
 }
 @media screen and (max-width: 376px) {
+    .center-text{
+        left: 80px !important;
+    }
 }
 @media screen and (max-width: 360px) {
     .center-text{
-        left: 100px !important;
+        left: 80px !important;
+    }
+    
+    #sermon_section{
+        width: 300px !important;
     }
 }
 @media screen and (max-width: 321px) {
     .center-text{
-        left: 80px !important;
+        left: 60px !important;
+    }
+    
+    #sermon_section{
+        width: 280px !important;
     }
 }

@@ -919,7 +919,7 @@
       width: auto;
       justify-content: center;
       padding-top: 100px;
-      padding-bottom: 220px;
+      padding-bottom: 250px;
     }
     .main-abt {
       width: 520px;
@@ -956,6 +956,7 @@
     .cards {
       width: 500px;
       overflow-x: scroll;
+      margin-top: 100px !important;
     }
     .card-options {
       width: 500px;
@@ -1012,7 +1013,7 @@
       width: auto;
       justify-content: center;
       padding-top: 100px;
-      padding-bottom: 220px;
+      padding-bottom: 280px;
     }
     .main-abt {
       width: 410px;
@@ -1096,17 +1097,29 @@
       font-size: 27px !important;
     }
     .desc-content p{
-      font-size: 18px !important;
+      font-size: 16px !important;
     }
     .register-content p{
-      font-size: 18px !important;
+      font-size: 16px !important;
     }
     .feedback-desc p{
-      font-size: 18px !important;
+      font-size: 16px !important;
     }
-    
+    .left p{
+      font-size: 16px !important;
+    }
     .abt-right p{
-      font-size: 18px !important;
+      font-size: 16px !important;
+    }
+    .option p{
+      font-size: 14px !important;
+    }
+    .contact-mmt h2{
+      font-size: 27px !important;
+    }
+    .contact-mmt p{
+      line-height: 27px !important;
+      font-size: 16px !important;
     }
   }
   
@@ -1343,7 +1356,7 @@
     #hero {
       width: auto !important;
       background: rgba(255, 255, 255, 1);
-      padding-bottom: 100px;
+      padding-bottom: 350px;
     }
     .hero-content {
       width: 360px !important;
@@ -1376,7 +1389,7 @@
     .about-content {
       width: auto;
       justify-content: center;
-      padding-top: 100px;
+      padding-top: 150px;
       padding-bottom: 340px;
     }
     .main-abt {
@@ -1767,7 +1780,7 @@
       font-size: 40px !important;
     }
     .left button {
-      margin-left: 105px;
+      margin-left: 80px !important;
     }
     .right {
       width: 300px !important;

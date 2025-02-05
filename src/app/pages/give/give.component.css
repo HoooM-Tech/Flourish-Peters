@@ -326,4 +326,10 @@
         width: auto !important;
         left: 100px !important;
     }
+    .text{
+        width: 280px !important;
+    }
+    .ppay{
+        width: 290px !important;
+    }
 }
