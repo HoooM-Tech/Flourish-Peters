@@ -24,12 +24,17 @@
     width: auto;
     display: flex;
     justify-content: center;
-    background: linear-gradient(303deg, #2B3877 -1.27%, #070D2B 28.68%);}
+    background: linear-gradient(303deg, #2B3877 -1.27%, #070D2B 28.68%);
+    padding-bottom: 80px;
+    padding-top: 80px;
+}
 .about-mcontent{
     width: auto;
     display: flex;
-    gap: 50px;
-    background: red;
+    gap: 150px;
+}
+.short-bio{
+    width: 290px;
 }
 .short-bio p{
     font-size: 14px;
@@ -45,7 +50,7 @@
     background-repeat: no-repeat;
 }
 .main-bio{
-    width: 750px;
+    width: 700px;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -133,19 +138,8 @@
     #about{
         width: 1440px;
     }
-    .about-fp{
-        width: 1296px !important;
-        justify-content: space-between;
-    }
-    #fp-image{
-        width: 1440px;
-    }
-    #about-ministry{
-        width: 1440px;
-    }
-    .about-church{
-        width: 1296px !important;
-        justify-content: space-between;
+    .about-flourish-peter{
+        width: auto !important;
     }
     #give{
         width: 1440px;
@@ -168,52 +162,40 @@
     #hero{
         width: auto;
     }
+    .about-flourish-peter{
+        width: auto;
+    }
+    .main-bio{
+        width: 700px !important;
+    }
+    .about-mcontent{
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+    }
+    .short-bio{
+        width: 500px;
+        text-align-last: center;
+    }
+    .img{
+        width: 500px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .main-bio h2{
+        text-align: center !important;
+    }
 }
 @media screen and (max-width: 920px) {
     #hero{
         width: auto;
     }
-    #about{
-        width: auto;
-    }
-    .about-fp{
-        width: 828px !important;
-    }
-    #about-ministry{
-        width: auto;
-    }
-    .about-church{
-        width: 828px !important;
-        padding-bottom: 80px !important;
-    }
 }
 @media screen and (max-width: 854px) {
     #hero{
         width: auto;
-    }
-    #about{
-        width: auto;
-    }
-    #fp-image{
-        width: auto;
-        height: 50vh;
-        background-size: cover !important;
-    }
-    .about-fp{
-        width: 768px !important;
-    }
-    .about-fp h2{
-        padding-left: 250px !important;
-    }
-    #about-ministry{
-        width: auto;
-    }
-    .about-church{
-        width: 768px !important;
-        padding-bottom: 150px !important;
-    }
-    .about-church h2{
-        padding-left: 300px !important;
     }
 }
 @media screen and (max-width: 768px) {
@@ -255,25 +237,11 @@
     .center-text{
         left: 180px !important;
     }
-
-    #about{
+    .about-flourish-peter{
         width: auto;
     }
-    .about-fp{
+    .main-bio{
         width: 480px !important;
-    }
-    .about-fp h2{
-        padding-left: 100px !important;
-    }
-    #about-ministry{
-        width: auto;
-    }
-    .about-church{
-        width: 480px !important;
-        padding-bottom: 550px !important;
-    }
-    .about-church h2{
-        padding-left: 150px !important;
     }
 }
 @media screen and (max-width: 431px) {
@@ -290,33 +258,22 @@
     .center-text h1{
         font-size: 60px !important;
     }
-    .about-fp{
-        width: 380px !important;
-        padding-bottom: 50px !important;
-    }
-    #about-ministry{
+    .about-flourish-peter{
         width: auto;
     }
-    .about-church{
+    .main-bio{
         width: 380px !important;
-        padding-bottom: 900px !important;
     }
-    .about-church h2{
-        padding-left: 100px !important;
+    .short-bio{
+        width: 380px;
+        text-align-last: center;
     }
-    .about-fp h2{
-        padding-left: 60px !important;
+    .img{
+        width: 380px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
-    #give{
-        width: auto;
-        justify-content: center;
-        align-items: center;
-    }
-      .content{
-        margin-top: 200px;
-        height: 350px;
-    }
-    
 }
 @media screen and (max-width: 414px) {
     
@@ -325,51 +282,80 @@
     .center-text{
         left: 120px !important;
     }
-    #about{
+    .about-flourish-peter{
         width: auto;
-        height: auto;
     }
-    .about-fp{
-        width: 350px !important;
-        padding-bottom: 180px !important;
+    .main-bio{
+        width: 360px !important;
     }
-    .about-church{
-        width: 350px !important;
-        padding-bottom: 950px !important;
+    .short-bio{
+        width: 360px;
+        text-align-last: center;
+    }
+    .img{
+        width: 360px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }
 @media screen and (max-width: 376px) {
-    .about-fp{
-        padding-bottom: 180px !important;
+    .about-flourish-peter{
+        width: auto;
+    }
+    .main-bio{
+        width: 340px !important;
+    }
+    .short-bio{
+        width: 340px;
+        text-align-last: center;
+    }
+    .img{
+        width: 340px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }
 @media screen and (max-width: 360px) {
     .center-text{
         left: 100px !important;
     }
-    .about-fp{
-        width: 320px !important;
+    .about-flourish-peter{
+        width: auto;
     }
-    #about-ministry{
-        height: auto !important;
+    .main-bio{
+        width: 330px !important;
     }
-    .about-church{
-        width: 320px !important;
-        padding-bottom: 1100px !important;
+    .short-bio{
+        width: 330px;
+        text-align-last: center;
+    }
+    .img{
+        width: 330px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }
 @media screen and (max-width: 321px) {
     .center-text{
         left: 80px !important;
     }
-    .about-fp{
-        width: 288px !important;
+    .about-flourish-peter{
+        width: auto;
     }
-    #about-ministry{
-        height: auto !important;
+    .main-bio{
+        width: 290px !important;
     }
-    .about-church{
-        width: 288px !important;
-        padding-bottom: 1300px !important;
+    .short-bio{
+        width: 290px;
+        text-align-last: center;
+    }
+    .img{
+        width: 290px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }
