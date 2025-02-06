@@ -419,6 +419,20 @@ div.center-text {
   margin-top: 150px;
   margin-bottom: 100px;
 }
+.fullwidth {
+  width: 40vw;
+  height: auto;
+  margin-left: 30px;
+}
+
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  /* width: max-content; */
+}
 .story-text {
   width: 450px;
   height: 400px;
@@ -437,14 +451,8 @@ div.center-text {
   line-height: 80px;
   color: rgba(255, 255, 255, 1);
 }
-.testimonials {
-  width: 700px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
 .testimonials .story {
-  width: 280px;
+  width: 260px;
   background: rgba(255, 255, 255, 1);
   text-align-last: left;
   border: 0.24px solid rgba(255, 255, 255, 1);
@@ -741,8 +749,11 @@ div.center-text {
   .testimonial-content{
     gap: 50px;
   }
-  .testimonials{
-    width: 900px;
+  
+  #testimonial {
+    width: 1024px;
+    justify-content: center;
+    align-items: center;
   }
   #prayer{
     width: auto;
@@ -814,6 +825,11 @@ div.center-text {
   }
   .precept1{
     margin-left: 300px;
+  }
+  
+  #testimonial {
+    width: auto;
+    justify-content: center;
   }
 }
 
@@ -960,9 +976,6 @@ div.center-text {
     width: 500px;
     height: auto;
   }
-  .testimonials{
-    width: 600px;
-  }
   .shop-content{
     margin-top: 80px !important;
   }
@@ -1051,6 +1064,13 @@ div.center-text {
     width: 350px !important;
     flex-wrap: wrap !important;
   }
+  .fullwidth{
+    width: 95vw !important;
+  }
+  .testimonials{
+    flex-wrap: nowrap !important;
+    overflow-x: scroll !important;
+  }
   .new-mmt{
     display: block !important;
     width: 540px !important;
@@ -1087,10 +1107,6 @@ div.center-text {
   .story-text{
     margin-left: 20px;
   }
-  .testimonials{
-    width: auto !important;
-    flex-wrap: wrap !important;
-  }
   .book1{
     margin-left: 10px;
   }
@@ -1113,6 +1129,15 @@ div.center-text {
     margin-top: 20px !important;
   }
 }
+/* @media screen and (max-width: 426px) {
+    #testimonial {
+      width: auto;
+      justify-content: center;
+    }
+  .center-text{
+    margin-top: 50px !important;
+  }
+} */
 @media screen and (max-width: 431px) {
   #hero{
     width: auto;
@@ -1182,7 +1207,7 @@ div.center-text {
     margin-left: 1px !important;
   }
   .book1{
-    margin-left: 400px !important;
+    margin-left: 480px !important;
   }
   #teachings{
     width: auto !important;
@@ -1214,7 +1239,7 @@ div.center-text {
     display: none !important;
   }
   .message1{
-    margin-left: 350px !important;
+    margin-left: 380px !important;
   }
   .sermons{
     width: 400px !important;
@@ -1254,7 +1279,7 @@ div.center-text {
     overflow-x: scroll;
   }
   .precept1{
-    margin-left: 500px !important;
+    margin-left: 600px !important;
   }
   #testimonial{
     width: auto !important;
@@ -1275,11 +1300,9 @@ div.center-text {
   .story-text h2{
     font-size: 30px !important;
   }
-
-  .testimonials{
-    width: auto !important;
-    flex-wrap: nowrap !important;
-    overflow-x: scroll;
+  #testimonial {
+    width: auto;
+    justify-content: center;
   }
   .story1{
     margin-left: 300px !important;
@@ -1287,7 +1310,7 @@ div.center-text {
 }
 @media screen and (max-width: 426px) {
   .center-text{
-    margin-top: 5px !important;
+    margin-top: 30px !important;
     width: 400px !important;
     text-align: center !important;
     justify-content: center !important;
@@ -1333,6 +1356,10 @@ div.center-text {
     display: block !important;
     width: 412px !important;
   }
+  #testimonial {
+    width: auto;
+    justify-content: center;
+  }
   .story-text{
     width: 380px !important;
     text-align: center !important;
@@ -1374,6 +1401,10 @@ div.center-text {
     padding-left: 20px !important;
     margin-left: 20px !important;
   }
+  #testimonial {
+    width: auto;
+    justify-content: center;
+  }
   .event-left{
     width: 350px !important;
     text-align: center !important;
@@ -1406,12 +1437,23 @@ div.center-text {
     padding-left: 20px !important;
     margin-left: 30px !important;
   }
+  
+  #testimonial {
+    width: auto;
+    justify-content: center;
+  }
   .story-text{
     width: 340px !important;
     text-align: center !important;
   }
   .story-text h2{
     font-size: 30px !important;
+  }
+  .message1{
+    margin-left: 400px !important;
+  }
+  .precept1{
+    margin-left: 650px !important;
   }
 }
 @media screen and (max-width: 361px) {
@@ -1441,10 +1483,6 @@ div.center-text {
     width: 310px !important;
     text-align: center !important;
   }
-  .testimonials{
-    width: 360px !important;
-    overflow-x: scroll;
-  }
   .story-text{
     width: 310px !important;
     text-align: center !important;
@@ -1456,8 +1494,20 @@ div.center-text {
     padding-left: 20px !important;
     margin-left: 30px !important;
   }
+  
+  .message1{
+    margin-left: 400px !important;
+  }
+  .precept1{
+    margin-left: 650px !important;
+  }
 }
 @media screen and (max-width: 351px) {
+  
+  #testimonial {
+    width: auto;
+    justify-content: center;
+  }
   .center-text{
     margin-top: 25px !important;
   }
@@ -1525,17 +1575,34 @@ div.center-text {
   .event-content{
     padding-top: 80px !important;
   }
-  .testimonials{
-    width: 344px !important;
-    overflow-x: scroll;
+  
+  #testimonial {
+    width: auto;
+    justify-content: center;
   }
   .testimonial-content{
     margin-top: 80px !important;
   }
+  
+  .message1{
+    margin-left: 400px !important;
+  }
+  .precept1{
+    margin-left: 650px !important;
+  }
 }
 @media screen and (max-width: 321px) {
+  #hero{
+    padding-bottom: 180px !important;
+  }
   .center-text{
-    margin-top: 50px !important;
+    margin-top: -20px !important;
+  }
+  .center-text h1{
+    font-size: 27px !important;
+  }
+  .hero-button{
+    margin-top: 30px;
   }
   .story-text{
     width: 300px !important;
@@ -1563,13 +1630,24 @@ div.center-text {
     /* padding-left: 20px !important; */
     margin-left: 30px !important;
   }
-  .testimonials{
-    width: 320px !important;
-    overflow-x: scroll;
+  
+  #testimonial {
+    width: auto;
+    justify-content: center;
   }
   .story-text{
     width: 300px !important;
     text-align: center !important;
+  }
+  /* .story1{
+    margin-left: 280px !important;
+  } */
+  
+  .message1{
+    margin-left: 400px !important;
+  }
+  .precept1{
+    margin-left: 650px !important;
   }
   .story-text h2{
     font-size: 30px !important;
