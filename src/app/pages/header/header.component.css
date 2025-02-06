@@ -152,19 +152,15 @@ ul li:hover {
     position: fixed;
     right: -350px;
     top: 75px;
-    background: linear-gradient(
-    117.26deg,
-    rgba(39, 39, 39, 0.9) 5.06%,
-    #100a0c 26.6%,
-    #070d2b 81.73%
-  );
-    /* background: rgba(255, 255, 255, 1); */
+    background: linear-gradient(250.46deg, #100A0C 3.62%, #070D2B 29.55%);
     border-radius: 10px;
     width: 280px;
     height: 100vh;
     transition: 0.5s ease-in;
-    background: rgba(255, 255, 255, 0.1);
     display: block;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
   }
   .dropdown li{
     padding: 5px;
@@ -172,6 +168,15 @@ ul li:hover {
     justify-content: center;
     align-items: center;
     list-style-type: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .first{
+    padding-top: 15px;
+  }
+  .not-show{
+    margin-left: 30px;
+    margin-top: 10px;
   }
   .dropdown ul{
     display: block !important;
