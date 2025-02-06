@@ -10,8 +10,18 @@
     <!-- Sermons -->
      <section id="sermons-preview">
         <div class="sermons-shortlink">
+            <div class="preview" *ngIf="selectedSermon">
+                <div class="serm">
+                    <img [src]="selectedSermon.SermonPreview" alt="">
+                    <div class="text">
+                        <p>{{selectedSermon.description}}-</p>
+                        <p><strong>{{selectedSermon.PreacherName}}</strong></p>
+                    </div>
+                </div>
+            </div>
+
             <div id="sermon_section">
-                <div class="serms" *ngFor="let sermon of teachings" routerLink="/blog/{{sermon.id}}">
+                <div class="serms" *ngFor="let sermon of teachings" (click)="selectSermon(sermon)">
                     <img [src]="sermon.SermonPreview" alt="">
                     <div class="text">
                         <p>{{sermon.description}}-</p>

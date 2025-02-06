@@ -3,4 +3,5 @@ export interface Sermons{
     description: string;
     PreacherName: string;
     SermonPreview: string;
+    videoUrl: string;
 }

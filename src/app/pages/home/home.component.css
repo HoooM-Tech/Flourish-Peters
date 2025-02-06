@@ -634,6 +634,10 @@ div.center-text {
     display: flex;
     justify-content: space-between;
   }
+  .new-mmt{
+    display: block !important;
+    width: 1440px !important;
+  }
 }
 
 @media screen and (max-width: 1280px) {
@@ -667,6 +671,7 @@ div.center-text {
     margin-left: 160px;
   }
   .new-mmt{
+    display: block;
     width: 1280px !important;
   }
   #event{
@@ -773,7 +778,8 @@ div.center-text {
     width: 700px !important;
   }
   .new-mmt{
-    width: 1024px;
+    display: block;
+    width: 1024px !important;
   }
 }
 @media screen and (max-width: 920px) {
@@ -831,6 +837,10 @@ div.center-text {
     width: auto;
     justify-content: center;
   }
+  .new-mmt{
+    display: block !important;
+    width: 920px !important;
+  }
 }
 
 @media screen and (max-width: 854px) {
@@ -882,7 +892,10 @@ div.center-text {
   .precept1{
     margin: 0;
   }
-
+  .new-mmt{
+    display: block !important;
+    width: 854px !important;
+  }
 }
 @media screen and (max-width: 768px) {
   .center-text{
@@ -1459,6 +1472,9 @@ div.center-text {
 @media screen and (max-width: 361px) {
   .center-text{
     margin-top: -30px !important;
+  }
+  .center-text h1{
+    font-size: 35px !important;
   }
   .hero-button{
     margin-top: 25px !important;

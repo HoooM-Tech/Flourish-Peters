@@ -8,6 +8,9 @@ import { SermonService } from 'src/app/services/sermon.service';
   styleUrls: ['./sermon.component.css']
 })
 export class SermonComponent {
+  selectedSermon?: Sermons;
+
+
   teachings: Sermons[] = [];
     currentPage: number = 1;
     pageSize: number = 9;
@@ -16,12 +19,12 @@ export class SermonComponent {
     constructor(private sermonService: SermonService){}
 
     ngOnInit(){
-      this.totalBlogs = this.sermonService.getTotalBlogs();
+      this.totalBlogs = this.sermonService.getTotalSermons();
           this.loadBlogs();
     }
   
     loadBlogs(): void {
-      this.teachings = this.sermonService.getBlogs(this.currentPage, this.pageSize);
+      this.teachings = this.sermonService.getSermons(this.currentPage, this.pageSize);
   }
 
   // Pagination logic
@@ -37,6 +40,13 @@ if (this.currentPage > 1) {
     this.currentPage--;
     this.loadBlogs();
 }
+}
+
+// For Every selected sermons
+selectSermon(sermon: Sermons): void {
+  this.selectedSermon = sermon;
+  // scroll to the top of the page to display the selected sermon
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 }
