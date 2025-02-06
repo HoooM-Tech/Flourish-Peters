@@ -807,7 +807,7 @@ div.center-text {
     width: 400px;
   }
   .book1{
-    margin-left: 350px;
+    margin-left: 400px;
   }
   .message-left{
     width: 320px;
@@ -817,7 +817,7 @@ div.center-text {
     width: 420px;
   }
   .message1{
-    margin-left: 280px;
+    margin-left: 350px;
   }
   .message-content{
     gap: 25px;
@@ -830,16 +830,22 @@ div.center-text {
     width: 450px;
   }
   .precept1{
-    margin-left: 300px;
+    margin-left: 400px;
   }
   
   #testimonial {
     width: auto;
     justify-content: center;
   }
+  .fullwidth{
+    width: 60vw;
+  }
   .new-mmt{
     display: block !important;
     width: 920px !important;
+  }
+  .story1{
+    margin-left: 350px;
   }
 }
 
@@ -1009,6 +1015,10 @@ div.center-text {
   .content{
     margin-top: 200px;
     height: 350px;
+  }
+  .testimonials{
+    flex-wrap: nowrap !important;
+    overflow-x: scroll !important;
   }
 }
 @media screen and (max-width: 540px) {

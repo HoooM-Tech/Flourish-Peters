@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-mmt',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class MmtComponent {
 
+  ngOnInit() {
+    AOS.init();
+  }
 }
