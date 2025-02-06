@@ -221,6 +221,10 @@ ul li{
       font-size: 18px;
       height: 55px !important;
   }
+  .links{
+    justify-content: left;
+    text-align-last: left;
+  }
 }
 @media screen and (max-width: 431px) {
   #footer{
@@ -282,9 +286,9 @@ ul li{
 
   .links{
     width:auto;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    /* align-item; */
+    justify-content: left;
+    text-align-last: left;
   }
   ul li{
     font-size: 22px !important;
