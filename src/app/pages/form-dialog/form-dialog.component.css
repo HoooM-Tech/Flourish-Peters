@@ -145,3 +145,78 @@ textarea{
     align-self: stretch;
     outline: none;
 }
+
+@media screen and (max-width: 540px) {
+    .form-details{
+        width: 380px;
+    }
+    .name input{
+        width: 380px;
+    }
+    .name select{
+        width: 380px;
+    }
+    .name textarea{
+        width: 380px;
+    }
+}
+
+@media screen and (max-width: 431px) {
+    .form-details{
+        width: 350px;
+    }
+    .name input{
+        width: 350px;
+    }
+    .name select{
+        width: 350px;
+    }
+    .name textarea{
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 391px) {
+    .form-details{
+        width: 340px;
+    }
+    .name input{
+        width: 340px;
+    }
+    .name select{
+        width: 340px;
+    }
+    .name textarea{
+        width: 340px;
+    }
+}
+
+@media screen and (max-width: 361px) {
+    .form-details{
+        width: 300px;
+    }
+    .name input{
+        width: 300px;
+    }
+    .name select{
+        width: 300px;
+    }
+    .name textarea{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .form-details{
+        width: 280px;
+    }
+    .name input{
+        width: 280px;
+    }
+    .name select{
+        width: 280px;
+    }
+    .name textarea{
+        width: 280px;
+    }
+}

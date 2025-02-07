@@ -605,7 +605,9 @@
     .card-options {
       margin-left: 10px;
       width: 1140px;
-      overflow-x: scroll;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     #testimonial {
       width: 1280px;
