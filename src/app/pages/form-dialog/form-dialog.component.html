@@ -1,0 +1,75 @@
+<div class="overlay" (click)="mmtFormService.closeDialog()"></div>
+
+<div class="form-details" (click)="mmtFormService.openDialog()">
+    <div class="page">
+        <div class="first" [class.active]="activeStep === 1">1</div>
+        <div class="first" [class.active]="activeStep === 2">2</div>
+    </div>
+    
+    <div class="main-form">
+        <p>Complete the form below</p>
+        <form *ngIf="activeStep === 1" [formGroup]="userForm" (ngSubmit)="nextStep()">
+            <div class="name">
+                <label>Full Name</label>
+                <input type="text">
+            </div>
+            <div class="name">
+                <label>Email Address</label>
+                <input type="email">
+            </div>
+            <div class="name">
+                <label>Phone Number</label>
+                <input type="tel">
+            </div>
+            <div class="name">
+                <label>Are you a member of Logic Church?</label>
+                <select>
+                    <option value=""></option>
+                    <option value="">No</option>
+                    <option value="">Yes</option>
+                </select>
+            </div>
+            <div class="name">
+                <label>Which class would you like to register for?</label>
+                <select>
+                    <option value=""></option>
+                    <option value="">Silver Class</option>
+                    <option value="">Gold Class</option>
+                    <option value="">Exclusive Class</option>
+                </select>
+            </div>
+        </form>
+
+        <div class="action">
+            <p (click)="mmtFormService.UserDialog">Cancel</p>
+            <button>Continue</button>
+        </div>
+    </div>
+
+    <div class="main-form" *ngIf="activeStep === 2" (ngSubmit)="nextStep()">
+        <p>Complete the form below</p>
+        <form [formGroup]="uploadForm">
+            <div class="name">
+                <label>What do you hope to gain from this mentorship class?</label>
+                <textarea type="text"></textarea>
+            </div>
+            <div class="name">
+                <label>Have you previously taken any GOSPEL or bible class?</label>
+                <input type="text">
+            </div>
+            <div class="name">
+                <label>Is there anything you would love to share with your mentor?</label>
+                <textarea type="text"></textarea>
+            </div>
+            <div class="name upload">
+                <label>Upload reciept</label>
+                <input type="file">
+            </div>
+        </form>
+
+        <div class="action">
+            <p>Cancel</p>
+            <button [disabled]="userForm.invalid">Done</button>
+        </div>
+    </div>
+</div>

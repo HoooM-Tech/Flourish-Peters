@@ -131,7 +131,7 @@
             <p class="class">Silver Class</p>
             <p class="title">N1,000,000</p>
             <P>Basic feature for up to 20-70 person</P>
-            <button>Get Started</button>
+            <button (click)="mmtFormService.openDialog()">Get Started</button>
             <p>Features</p>
             <p class="class">Everything in Silver Class</p>
             <p>
@@ -154,7 +154,7 @@
             <p class="class">Gold Class</p>
             <p class="title">N3,000,000</p>
             <P>Basic feature for up to 5-15 person</P>
-            <button>Get Started</button>
+            <button (click)="mmtFormService.openDialog()">Get Started</button>
             <p>Features</p>
             <p class="class">Everything in Gold Class</p>
             <p>
@@ -173,7 +173,7 @@
             <p class="class">Exclusive Class</p>
             <p class="title">Upon Request</p>
             <P>Basic feature for up to 20-70 person</P>
-            <button>Get Started</button>
+            <button (click)="mmtFormService.openDialog()">Get Started</button>
             <p>Features</p>
             <p class="class">Everything in Exclusive Class</p>
             <p>
@@ -331,4 +331,7 @@
       </div>
     </section>
     <app-footer></app-footer>
+
+    <app-form-dialog *ngIf="mmtFormService.UserDialog"></app-form-dialog>
+
   </section>  

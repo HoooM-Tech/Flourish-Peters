@@ -1,0 +1,147 @@
+.overlay{
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.form-details{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 1);
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    z-index: 1200;
+    margin: auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 650px;
+}
+.page{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+.first{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50px;
+    height: 40px;
+    border-radius: 25px;
+    border-radius: 25px;
+    opacity: 0.2;
+    background: rgba(7, 44, 80, 1);
+    color: rgba(255, 255, 255, 1);
+}
+.first.active{
+    background: rgba(7, 44, 80, 1);
+}
+.main-form{
+    display: block;
+}
+.main-form p{
+    color: rgba(7, 44, 80, 0.9);
+    font-family: "Satoshi Variable";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.name{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    width: 500px;
+}
+.name input{
+    border-radius: 8px;
+    border: 0.5px solid rgba(0, 0, 0, 0.30);
+    height: 45px;
+    width: 400px;
+    align-self: stretch;
+    outline: none;
+}
+label{
+    color: rgba(0, 0, 0, 0.5);
+    font-family: "Satoshi Variable";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align-last: left;
+    padding-top: 15px;
+}
+.action{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    outline: none;
+    margin-top: 15px;
+}
+.action p{
+    color: rgba(199, 28, 28, 1);
+    font-family: "Satoshi Variable";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}
+.action button{
+    display: flex;
+    padding: 10px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 12px;
+    border: none;
+    color: rgba(255, 255, 255, 1);
+    background: linear-gradient(356deg, #072C50 2.73%, #165EA4 103%);
+}
+select{
+    border-radius: 8px;
+    border: 0.5px solid rgba(0, 0, 0, 0.30);
+    height: 45px;
+    width: 400px;
+    align-self: stretch;
+    outline: none;
+    outline: none;
+}
+textarea{
+    border-radius: 8px;
+    border: 0.5px solid rgba(0, 0, 0, 0.30);
+    height: 55px;
+    width: 400px;
+    align-self: stretch;
+    outline: none;
+}
+.upload input{
+    border-radius: 8px;
+    border: 0.5px solid rgba(0, 0, 0, 0.30);
+    height: 100px;
+    width: 220px;
+    align-self: stretch;
+    outline: none;
+}

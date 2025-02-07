@@ -15,6 +15,9 @@ import { HeaderComponent } from './pages/header/header.component';
 import { MmtComponent } from './pages/mmt/mmt.component';
 import { MmtNavComponent } from './pages/mmt-nav/mmt-nav.component';
 import { MmtFooterComponent } from './pages/mmt-footer/mmt-footer.component';
+import { FormDialogComponent } from './pages/form-dialog/form-dialog.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MmtformService } from './services/mmtform.service';
 
 @NgModule({
   declarations: [
@@ -30,13 +33,15 @@ import { MmtFooterComponent } from './pages/mmt-footer/mmt-footer.component';
     HeaderComponent,
     MmtComponent,
     MmtNavComponent,
-    MmtFooterComponent
+    MmtFooterComponent,
+    FormDialogComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [MmtformService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
