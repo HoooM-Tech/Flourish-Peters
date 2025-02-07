@@ -1389,7 +1389,7 @@ div.center-text {
 }
 @media screen and (max-width: 415px) {
   .center-text{
-    margin-top: -100px !important;
+    margin-top: 40px !important;
     width: 400px !important;
     text-align: center !important;
     justify-content: center !important;
@@ -1512,6 +1512,11 @@ div.center-text {
     margin-left: 650px !important;
   }
 }
+/* @media screen and (max-width: 356px) {
+  .center-text{
+    margin-top: 60px !important;
+  }
+} */
 @media screen and (max-width: 361px) {
   .center-text{
     margin-top: -30px !important;
