@@ -86,10 +86,22 @@ ul li:hover {
   nav {
     width: 1440px;
   }
+  ul li{
+    font-size: 24px;
+  }
+  ul li:hover{
+    font-size: 24.5;
+  }
 }
 @media screen and (max-width: 1280px) {
   nav {
     width: 1280px;
+  }
+  ul li{
+    font-size: 24px;
+  }
+  ul li:hover{
+    font-size: 24.5;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -98,6 +110,12 @@ ul li:hover {
   }
   .nav-btn{
     margin-right: 10px;
+  }
+  ul li{
+    font-size: 24px;
+  }
+  ul li:hover{
+    font-size: 24.5;
   }
 }
 

@@ -932,7 +932,7 @@ div.center-text {
 }
 @media screen and (max-width: 768px) {
   .center-text{
-    margin-top: 30px;
+    margin-top: -80px;
   }
   #shop{
     justify-content: center !important;
@@ -1119,9 +1119,6 @@ div.center-text {
     width: 350px !important;
     flex-wrap: wrap !important;
   }
-  /* .fullwidth{
-    width: 95vw !important;
-  } */
   .testimonials{
     flex-wrap: nowrap !important;
     overflow-x: scroll !important;
@@ -1429,7 +1426,7 @@ div.center-text {
 }
 @media screen and (max-width: 391px) {
   .center-text{
-    margin-top: -100px !important;
+    margin-top: -80px !important;
     width: 400px !important;
     text-align: center !important;
     justify-content: center !important;
