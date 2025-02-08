@@ -1,9 +1,9 @@
 <div class="overlay" (click)="mmtFormService.closeDialog()"></div>
 
-<div class="form-details" (click)="mmtFormService.openDialog()">
+<div class="form-details hide-scrollbar" (click)="mmtFormService.openDialog()">
     <div class="page">
-        <div class="first" [class.active]="activeStep === 1">1</div>
-        <div class="first" [class.active]="activeStep === 2">2</div>
+        <div class="step" [class.active]="activeStep === 1" (click)="activeStep = 1">1</div>
+        <div class="step" [class.active]="activeStep === 2" (click)="activeStep = 2">2</div>
     </div>
     
     <div class="main-form">
@@ -11,65 +11,74 @@
         <form *ngIf="activeStep === 1" [formGroup]="userForm" (ngSubmit)="nextStep()">
             <div class="name">
                 <label>Full Name</label>
-                <input type="text">
+                <input type="text" formControlName="name">
+                <span class="text-danger" *ngIf="userForm.get('name')?.hasError('required') && userForm.get('name')?.touched">*name is required</span>
             </div>
             <div class="name">
                 <label>Email Address</label>
-                <input type="email">
+                <input type="email" formControlName="email">
+                <span class="text-danger" *ngIf="userForm.get('email')?.hasError('required') && userForm.get('email')?.touched">*email is required</span>
+                <span class="text-danger" *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched">*Enter a valid Phone number</span>
+        
             </div>
             <div class="name">
                 <label>Phone Number</label>
-                <input type="tel">
+                <input type="tel" formControlName="phone_number">
+                <span class="text-danger" *ngIf="userForm.get('phone_number')?.hasError('required') && userForm.get('phone_number')?.touched">*Phonenumber is required</span>
+                <span class="text-danger" *ngIf="userForm.get('phone_number')?.invalid && userForm.get('phone_number')?.touched">*Enter a valid Phone number</span>
             </div>
             <div class="name">
                 <label>Are you a member of Logic Church?</label>
-                <select>
-                    <option value=""></option>
-                    <option value="">No</option>
-                    <option value="">Yes</option>
+                <select formControlName="is_member">
+                    <option value="">Choose an option</option>
+                    <option value="FALSE">No</option>
+                    <option value="TRUE">Yes</option>
                 </select>
             </div>
             <div class="name">
                 <label>Which class would you like to register for?</label>
-                <select>
-                    <option value=""></option>
-                    <option value="">Silver Class</option>
-                    <option value="">Gold Class</option>
-                    <option value="">Exclusive Class</option>
+                <select formControlName="class">
+                    <option value="">choose an option</option>
+                    <option value="SILVER">Silver Class</option>
+                    <option value="GOLD">Gold Class</option>
+                    <option value="EXCLUSIVE">Exclusive Class</option>
                 </select>
             </div>
         </form>
 
         <div class="action">
-            <p (click)="mmtFormService.UserDialog">Cancel</p>
-            <button>Continue</button>
+            <a (click)="mmtFormService.closeDialog()">Cancel</a>
+            <button type="submit" [disabled]="userForm.invalid">Continue</button>
         </div>
     </div>
 
-    <div class="main-form" *ngIf="activeStep === 2" (ngSubmit)="nextStep()">
+    <div class="main-form2" *ngIf="activeStep === 2">
         <p>Complete the form below</p>
-        <form [formGroup]="uploadForm">
+        <form [formGroup]="userForm" (ngSubmit)="submitForm()">
             <div class="name">
                 <label>What do you hope to gain from this mentorship class?</label>
-                <textarea type="text"></textarea>
+                <textarea type="text" formControlName="experience"></textarea>
+                <span class="text-danger" *ngIf="userForm.get('experience')?.hasError('required') && userForm.get('experience')?.touched">*field is required</span>
             </div>
             <div class="name">
                 <label>Have you previously taken any GOSPEL or bible class?</label>
-                <input type="text">
+                <input type="text" formControlName="previous_class">
+                <span class="text-danger" *ngIf="userForm.get('previous_class')?.hasError('required') && userForm.get('previous_class')?.touched">*field is required</span>
             </div>
             <div class="name">
                 <label>Is there anything you would love to share with your mentor?</label>
-                <textarea type="text"></textarea>
+                <textarea type="text" formControlName="mentor"></textarea>
+                <span class="text-danger" *ngIf="userForm.get('mentor')?.hasError('required') && userForm.get('mentor')?.touched">*field is required</span>
             </div>
             <div class="name upload">
                 <label>Upload reciept</label>
-                <input type="file">
+                <input type="file" formControlName="reciept" (change)="onFileChange($event)" accept=".jpg,.png,.pdf">
             </div>
         </form>
 
         <div class="action">
-            <p>Cancel</p>
-            <button [disabled]="userForm.invalid">Done</button>
+            <a (click)="activeStep = 1">Cancel</a>
+            <button type="submit" [disabled]="userForm.invalid">Done</button>
         </div>
     </div>
 </div>

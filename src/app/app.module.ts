@@ -16,8 +16,9 @@ import { MmtComponent } from './pages/mmt/mmt.component';
 import { MmtNavComponent } from './pages/mmt-nav/mmt-nav.component';
 import { MmtFooterComponent } from './pages/mmt-footer/mmt-footer.component';
 import { FormDialogComponent } from './pages/form-dialog/form-dialog.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MmtformService } from './services/mmtform.service';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,9 @@ import { MmtformService } from './services/mmtform.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    SweetAlert2Module.forRoot()
   ],
   providers: [MmtformService],
   bootstrap: [AppComponent]

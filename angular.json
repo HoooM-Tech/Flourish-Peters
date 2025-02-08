@@ -29,7 +29,11 @@
               "node_modules/aos/dist/aos.css"
             ],
             "scripts": ["node_modules/aos/dist/aos.js"],
-            "allowedCommonJsDependencies": ["aos"]
+            "allowedCommonJsDependencies": [
+              "aos",
+              "@sweetalert2/ngx-sweetalert2",
+              "sweetalert2"
+          ]
           },
           "configurations": {
             "production": {

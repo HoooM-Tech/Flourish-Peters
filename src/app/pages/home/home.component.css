@@ -860,15 +860,14 @@ div.center-text {
     width: auto;
     justify-content: center;
   }
-  /* .fullwidth{
-    width: 60vw;
-  } */
   .new-mmt{
     display: block !important;
     width: 920px !important;
   }
-  .story1{
-    /* margin-left: 350px; */
+}
+@media screen and (max-width: 912px) {
+  .center-text{
+    /* margin-top: -50px; */
   }
 }
 
@@ -1051,6 +1050,11 @@ div.center-text {
     display: none !important;
   }
 }
+@media screen and (max-width: 640px) {
+  .center-text{
+    margin-top: -100px !important;
+  }
+}
 @media screen and (max-width: 540px) {
   #hero{
     width: auto;
@@ -1196,7 +1200,7 @@ div.center-text {
     overflow-y: hidden;
   }
   .center-text{
-    margin-top: -120px !important;
+    margin-top: -100px !important;
     width: 400px !important;
     text-align: center !important;
     justify-content: center !important;
@@ -1247,7 +1251,7 @@ div.center-text {
     text-align: center !important;
   }
   .shop-left h2{
-    font-size: 30px !important;
+    font-size: 27px !important;
   }
   .shop-left img{
     display: none !important;
@@ -1288,7 +1292,7 @@ div.center-text {
     text-align: center !important;
   }
   .message-left h2{
-    font-size: 30px !important;
+    font-size: 27px !important;
   }
   .message-left img{
     display: none !important;
@@ -1324,7 +1328,7 @@ div.center-text {
     margin-left: 30px !important;
   }
   .event-left h2{
-    font-size: 30px !important;
+    font-size: 27px !important;
   }
   .event-left img{
     display: none !important;
@@ -1354,14 +1358,26 @@ div.center-text {
     text-align-last: center !important;
   }
   .story-text h2{
-    font-size: 30px !important;
+    font-size: 27px !important;
   }
   #testimonial {
     width: auto;
     justify-content: center;
   }
-  .story1{
-    /* margin-left: 300px !important; */
+  .story p{
+    font-size: 18px !important;
+  }
+  .precepts p{
+    font-size: 18px !important;
+  }
+  .get-message p{
+    font-size: 18px !important;
+  }
+  .book p{
+    font-size: 18px !important;
+  }
+  .prayer-text p{
+    font-size: 18px !important;
   }
 }
 @media screen and (max-width: 426px) {
@@ -1383,13 +1399,10 @@ div.center-text {
     width: 380px !important;
     text-align: center !important;
   }
-  .story-text h2{
-    font-size: 30px !important;
-  }
 }
 @media screen and (max-width: 415px) {
   .center-text{
-    margin-top: 40px !important;
+    margin-top: -50px !important;
     width: 400px !important;
     text-align: center !important;
     justify-content: center !important;
@@ -1402,9 +1415,6 @@ div.center-text {
   .story-text{
     width: 380px !important;
     text-align: center !important;
-  }
-  .story-text h2{
-    font-size: 30px !important;
   }
 }
 @media screen and (max-width: 412px) {
@@ -1420,9 +1430,6 @@ div.center-text {
     width: 380px !important;
     text-align: center !important;
   }
-  .story-text h2{
-    font-size: 30px !important;
-  }
 }
 @media screen and (max-width: 391px) {
   .center-text{
@@ -1431,6 +1438,9 @@ div.center-text {
     text-align: center !important;
     justify-content: center !important;
     align-items: center !important;
+  }
+  .center-text h1{
+    font-size: 35px !important;
   }
   .new-mmt{
     display: block !important;
@@ -1470,7 +1480,31 @@ div.center-text {
     text-align: center !important;
   }
   .story-text h2{
-    font-size: 30px !important;
+    font-size: 27px !important;
+  }
+  .story p{
+    font-size: 18px !important;
+  }
+  .precepts p{
+    font-size: 18px !important;
+  }
+  .get-message p{
+    font-size: 18px !important;
+  }
+  .book p{
+    font-size: 18px !important;
+  }
+  .prayer-text p{
+    font-size: 18px !important;
+  }
+  .event-left h2{
+    font-size: 27px !important;
+  }
+  .message-left h2{
+    font-size: 27px !important;
+  }
+  .shop-left h2{
+    font-size: 27px !important;
   }
 }
 @media screen and (max-width: 376px) {
@@ -1502,9 +1536,9 @@ div.center-text {
     width: 340px !important;
     text-align: center !important;
   }
-  .story-text h2{
+  /* .story-text h2{
     font-size: 30px !important;
-  }
+  } */
   .message1{
     margin-left: 400px !important;
   }
@@ -1512,11 +1546,6 @@ div.center-text {
     margin-left: 650px !important;
   }
 }
-/* @media screen and (max-width: 356px) {
-  .center-text{
-    margin-top: 60px !important;
-  }
-} */
 @media screen and (max-width: 361px) {
   .center-text{
     margin-top: -30px !important;
@@ -1551,9 +1580,9 @@ div.center-text {
     width: 310px !important;
     text-align: center !important;
   }
-  .story-text h2{
+  /* .story-text h2{
     font-size: 30px !important;
-  }
+  } */
   .get-event{
     padding-left: 20px !important;
     margin-left: 30px !important;
@@ -1584,19 +1613,19 @@ div.center-text {
   .hero-button{
     margin-left: 40px !important;
   }
-  .shop-left h2{
+  /* .shop-left h2{
     font-size: 30px !important;
-  }
+  } */
   .new-mmt{
     width: 344px !important;
     display: block !important;
   }
-  .message-left h2{
+  /* .message-left h2{
     font-size: 30px !important;
   }
   .event-left h2{
     font-size: 30px !important;
-  }
+  } */
   .message1{
     margin-left: 400px !important;
   }
@@ -1713,9 +1742,9 @@ div.center-text {
   .precept1{
     margin-left: 650px !important;
   }
-  .story-text h2{
+  /* .story-text h2{
     font-size: 30px !important;
-  }
+  } */
 }
 
   
