@@ -1417,6 +1417,25 @@ div.center-text {
     text-align: center !important;
   }
 }
+
+/* ADDED 413 AND 362 */
+@media screen and (max-width: 413px) {
+  .center-text{
+    margin-top: -50px !important;
+    width: 400px !important;
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .new-mmt{
+    display: block !important;
+    width: 414px !important;
+  }
+  .story-text{
+    width: 380px !important;
+    text-align: center !important;
+  }
+}
 @media screen and (max-width: 412px) {
   .new-mmt{
     display: block !important;
@@ -1536,9 +1555,52 @@ div.center-text {
     width: 340px !important;
     text-align: center !important;
   }
-  /* .story-text h2{
-    font-size: 30px !important;
-  } */
+  .message1{
+    margin-left: 400px !important;
+  }
+  .precept1{
+    margin-left: 650px !important;
+  }
+}
+@media screen and (max-width: 362px) {
+  .center-text{
+    margin-top: -30px !important;
+  }
+  .center-text h1{
+    font-size: 35px !important;
+  }
+  .hero-button{
+    margin-top: 25px !important;
+    margin-left: 50px !important;
+  }
+  .new-mmt{
+    display: block !important;
+    width: 360px !important;
+  }
+  .shop-left{
+    width: 310px !important;
+    text-align: center !important;
+  }
+  .message1{
+    margin-left: 400px !important;
+  }
+  .message-left{
+    width: 310px !important;
+    text-align: center !important;
+  }
+  .event-left{
+    width: 310px !important;
+    text-align: center !important;
+  }
+  .story-text{
+    width: 310px !important;
+    text-align: center !important;
+  }
+  .get-event{
+    padding-left: 20px !important;
+    margin-left: 30px !important;
+  }
+  
   .message1{
     margin-left: 400px !important;
   }
@@ -1580,9 +1642,6 @@ div.center-text {
     width: 310px !important;
     text-align: center !important;
   }
-  /* .story-text h2{
-    font-size: 30px !important;
-  } */
   .get-event{
     padding-left: 20px !important;
     margin-left: 30px !important;
