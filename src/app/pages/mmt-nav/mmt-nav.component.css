@@ -15,7 +15,7 @@ header {
   
   .right button {
     display: inline-flex;
-    padding: 10px 24px;
+    padding: 12px 26px;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -25,6 +25,9 @@ header {
     box-shadow: 0px 4px 12.3px 0px rgba(255, 115, 43, 0.2) inset,
       0px 3px 8.8px 0px rgba(255, 157, 71, 0.25);
     color: rgba(255, 255, 255, 1);
+  }
+  .right button:hover {
+    cursor: pointer;
   }
   
   @media screen and (min-width: 200px) and (max-width: 920px) {
