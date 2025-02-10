@@ -8,6 +8,285 @@
     z-index: 1000;
 }
 
+/* Base container styles */
+.registration-container {
+    max-width: 600px;
+    margin: 1rem auto;
+    padding: 2rem;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 1);
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    z-index: 1200;
+    margin: auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 650px;
+    overflow-y: scroll;
+  }
+  
+  /* Stepper Styles */
+  .stepper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    position: relative;
+    padding: 0 1rem;
+  }
+  
+  .step {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+  
+  .step-number {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #e2e8f0;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+  }
+  
+  .step-number.active {
+    background: #3b82f6;
+    color: white;
+  }
+  
+  .step-number.completed {
+    background: #22c55e;
+    color: white;
+  }
+  
+  .step-title {
+    margin-left: 0.5rem;
+    color: #64748b;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .step-title.active {
+    color: #1e293b;
+  }
+  
+  .step-line {
+    flex: 1;
+    height: 2px;
+    background: #e2e8f0;
+    margin: 0 0.5rem;
+  }
+  
+  .step-line.active {
+    background: #3b82f6;
+  }
+  
+  /* Form Styles */
+  .form-step {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #1e293b;
+  }
+  
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+  }
+  
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+  }
+  
+  .error-message {
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+  
+  .file-hint {
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-top: 0.25rem;
+  }
+  
+  /* Button Styles */
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+  }
+  
+  .btn-primary {
+    background: #3b82f6;
+    color: white;
+    border: none;
+  }
+  
+  .btn-primary:hover:not(:disabled) {
+    background: #2563eb;
+  }
+  
+  .btn-secondary {
+    background: white;
+    color: #1e293b;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .btn-secondary:hover:not(:disabled) {
+    background: #f8fafc;
+  }
+  
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* Responsive Breakpoints */
+  
+  /* Large tablets and small laptops */
+  @media (max-width: 1024px) {
+    .registration-container {
+      max-width: 90%;
+      margin: 1rem auto;
+    }
+  }
+  
+  /* Tablets */
+  @media (max-width: 768px) {
+    .registration-container {
+      padding: 1.5rem;
+    }
+  
+    .step-title {
+      font-size: 0.75rem;
+    }
+  
+    button {
+      padding: 0.625rem 1.25rem;
+    }
+  }
+  
+  /* Large Mobile */
+  @media (max-width: 640px) {
+    .registration-container {
+      padding: 1rem;
+      margin: 0.5rem;
+      max-width: 100%;
+    }
+  
+    .stepper {
+      padding: 0;
+    }
+  
+    .step-number {
+      width: 28px;
+      height: 28px;
+      font-size: 0.875rem;
+    }
+  
+    .step-title {
+      display: none;
+    }
+  
+    .form-actions {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+  
+    button {
+      width: 100%;
+      padding: 0.75rem;
+    }
+  
+    input,
+    select,
+    textarea {
+      padding: 0.625rem;
+      font-size: 0.875rem;
+    }
+  }
+  
+  /* Small Mobile */
+  @media (max-width: 375px) {
+    .registration-container {
+      padding: 0.75rem;
+      border-radius: 4px;
+    }
+  
+    .step-number {
+      width: 24px;
+      height: 24px;
+      font-size: 0.75rem;
+    }
+  
+    .step-line {
+      margin: 0 0.25rem;
+    }
+  
+    label {
+      font-size: 0.875rem;
+    }
+  }
+  
+
+
+
+
+
+
+/* .overlay{
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
 .form-details{
     width: 400px;
     display: flex;
@@ -246,4 +525,4 @@ textarea{
     .action{
         width: 280px;
     }
-}
+} */

@@ -19,6 +19,7 @@ import { FormDialogComponent } from './pages/form-dialog/form-dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MmtformService } from './services/mmtform.service';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    SweetAlert2Module.forRoot()
+    SweetAlert2Module.forRoot(),
+    HttpClientModule
   ],
   providers: [MmtformService],
   bootstrap: [AppComponent]
