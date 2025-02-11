@@ -2044,7 +2044,7 @@ div.center-text {
 }
 @media screen and (max-width: 431px) {
   div.center-text{
-    padding-top: 20px !important;
+    padding-top: 5px !important;
   }
   .center-img{
     width: 180px;
@@ -2071,7 +2071,7 @@ div.center-text {
 
 @media screen and (max-width: 415px) {
   div.center-text{
-    padding-top: 20px !important;
+    padding-top: 1px !important;
   }
   .center-text h1 {
     font-size: 27px !important;
@@ -2086,7 +2086,7 @@ div.center-text {
 @media screen and (max-width: 390px) {
   div.center-text {
     max-width: 340px;
-    padding-top: 140px;
+    /* padding-top: 140px; */
   }
   .center-text h1 {
     font-size: 27px !important;
@@ -2108,7 +2108,7 @@ div.center-text {
 @media screen and (max-width: 360px) {
   div.center-text {
     max-width: 300px;
-    padding-top: 150px;
+    /* padding-top: 150px; */
   }
 }
 
@@ -2124,7 +2124,7 @@ div.center-text {
 @media screen and (max-width: 320px) {
   div.center-text {
     max-width: 260px;
-    padding-top: 160px;
+    /* padding-top: 160px; */
   }
   .center-text h1 {
     font-size: 26px;
