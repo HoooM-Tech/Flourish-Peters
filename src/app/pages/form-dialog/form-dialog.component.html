@@ -1,233 +1,228 @@
 <div class="overlay" (click)="mmtFormService.closeDialog()"></div>
 
-<div class="registration-container hide-scrollbar" (click)="mmtFormService.openDialog()">
-    <!-- Stepper -->
-    <div class="stepper">
-      <div class="step" *ngFor="let step of steps; let i = index">
+<div
+  class="registration-container hide-scrollbar"
+  (click)="mmtFormService.openDialog()"
+>
+  <!-- Stepper -->
+  <div class="stepper">
+    <div class="step" *ngFor="let step of steps; let i = index">
+      <div
+        class="step-number"
+        [class.active]="i + 1 <= currentStep"
+        [class.completed]="step.completed"
+      >
+        {{ i + 1 }}
+      </div>
+      <div class="step-title" [class.active]="i + 1 <= currentStep">
+        {{ step.title }}
+      </div>
+      <div
+        *ngIf="i < steps.length - 1"
+        class="step-line"
+        [class.active]="i + 1 < currentStep"
+      ></div>
+    </div>
+  </div>
+
+  <!-- Form -->
+  <form
+    [formGroup]="userForm"
+    (ngSubmit)="onSubmit()"
+    class="registration-form"
+  >
+    <!-- Step 1: Personal Information -->
+    <div *ngIf="currentStep === 1" class="form-step">
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" formControlName="fullName" />
         <div
-          class="step-number"
-          [class.active]="i + 1 <= currentStep"
-          [class.completed]="step.completed"
+          class="error-message"
+          *ngIf="
+            userForm.get('fullName')?.touched &&
+            userForm.get('fullName')?.invalid
+          "
         >
-          {{ i + 1 }}
+          {{ getErrorMessage("fullName") }}
         </div>
-        <div class="step-title" [class.active]="i + 1 <= currentStep">
-          {{ step.title }}
-        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Email Adress</label>
+        <input
+          type="email"
+          formControlName="email"
+          placeholder="Enter your email"
+        />
         <div
-          *ngIf="i < steps.length - 1"
-          class="step-line"
-          [class.active]="i + 1 < currentStep"
-        ></div>
+          class="error-message"
+          *ngIf="
+            userForm.get('email')?.touched && userForm.get('email')?.invalid
+          "
+        >
+          {{ getErrorMessage("email") }}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" formControlName="phone_number" />
+        <div
+          class="error-message"
+          *ngIf="
+            userForm.get('phone_number')?.touched &&
+            userForm.get('phone_number')?.invalid
+          "
+        >
+          {{ getErrorMessage("phone_number") }}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Are you a member of Logic Church?</label>
+        <select formControlName="is_member">
+          <option value="">Choose an option</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+        <div
+          class="error-message"
+          *ngIf="
+            userForm.get('is_member')?.touched &&
+            userForm.get('is_member')?.invalid
+          "
+        >
+          {{ getErrorMessage("is_member") }}
+        </div>
       </div>
     </div>
-  
-    <!-- Form -->
-    <form
-      [formGroup]="userForm"
-      (ngSubmit)="onSubmit()"
-      class="registration-form"
-    >
-      <!-- Step 1: Personal Information -->
-      <div *ngIf="currentStep === 1" class="form-step">
-        <div class="form-group">
-          <label>Full Name</label>
-          <input
-            type="text"
-            formControlName="fullName"
-          />
-          <div
-            class="error-message"
-            *ngIf="
-              userForm.get('fullName')?.touched &&
-              userForm.get('fullName')?.invalid
-            "
-          >
-            {{ getErrorMessage("fullName") }}
-          </div>
-        </div>
-  
-        <div class="form-group">
-          <label>Email Adress</label>
-          <input
-            type="email"
-            formControlName="email"
-            placeholder="Enter your email"
-          />
-          <div
-            class="error-message"
-            *ngIf="
-              userForm.get('email')?.touched &&
-              userForm.get('email')?.invalid
-            "
-          >
-            {{ getErrorMessage("email") }}
-          </div>
-        </div>
-  
-        <div class="form-group">
-          <label>Phone Number</label>
-          <input
-            type="tel"
-            formControlName="phone_number"
-          />
-          <div
-            class="error-message"
-            *ngIf="
-              userForm.get('phone_number')?.touched &&
-              userForm.get('phone_number')?.invalid
-            "
-          >
-            {{ getErrorMessage("phone_number") }}
-          </div>
-        </div>
 
-        <div class="form-group">
-            <label>Are you a member of Logic Church?</label>
-            <select formControlName="is_member">
-                <option value="">Choose an option</option>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select>
-            <div
-              class="error-message"
-              *ngIf="
-                userForm.get('is_member')?.touched &&
-                userForm.get('is_member')?.invalid
-              "
-            >
-              {{ getErrorMessage("is_member") }}
-            </div>
-          </div>
-      </div>
-  
-      <!-- Step 2: Questions -->
-      <div *ngIf="currentStep === 2" class="form-step">
-        <div class="form-group">
-          <label>Which class would you like to register for?</label>
-          <select formControlName="class">
-            <option value="">Select an answer</option>
-            <option value="Silver">Silver Class</option>
-            <option value="Gold">Gold Class</option>
-            <option value="Exclusive">Exclusive Class</option>
-          </select>
-          <div
-            class="error-message"
-            *ngIf="
-              userForm.get('class')?.touched &&
-              userForm.get('class')?.invalid
-            "
-          >
-            {{ getErrorMessage("class") }}
-          </div>
-        </div>
-
-        <div class="form-group">
-            <label>What do you hope to gain from this Experience?</label>
-            <input
-              type="text"
-              formControlName="experience"
-            />
-            <div
-              class="error-message"
-              *ngIf="
-                userForm.get('experience')?.touched &&
-                userForm.get('experience')?.invalid
-              "
-            >
-              {{ getErrorMessage("experience") }}
-            </div>
-          </div>
-  
-        <div class="form-group">
-          <label>Have you previously taken any Gospel or bible Class?</label>
-          <select formControlName="previous_class">
-            <option value="">Select an answer</option>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-          </select>
-          <div
-            class="error-message"
-            *ngIf="
-              userForm.get('previous_class')?.touched &&
-              userForm.get('previous_class')?.invalid
-            "
-          >
-            {{ getErrorMessage("previous_class") }}
-          </div>
-        </div>
-      </div>
-  
-      <!-- Step 3: Additional Questions and File Upload -->
-      <div *ngIf="currentStep === 3" class="form-step">
-        <div class="form-group">
-          <label>Is there anything you would love to share with your mentor?</label>
-          <textarea formControlName="mentor" rows="3"></textarea>
-          <div
-            class="error-message"
-            *ngIf="
-                userForm.get('mentor')?.touched &&
-                userForm.get('mentor')?.invalid
-            "
-          >
-            {{ getErrorMessage("mentor") }}
-          </div>
-        </div>
-  
-        <div class="form-group">
-          <label>Any additional comments?</label>
-          <textarea formControlName="reciept" rows="3"></textarea>
-          <div
-            class="error-message"
-            *ngIf="
-                userForm.get('reciept')?.touched &&
-                userForm.get('reciept')?.invalid
-            "
-          >
-            {{ getErrorMessage("reciept") }}
-          </div>
-        </div>
-  
-        <div class="form-group">
-          <label>Upload Document</label>
-          <input
-            type="file"
-            (change)="onFileSelect($event)"
-            accept=".pdf,.doc,.docx"
-          />
-          <div class="file-hint">Maximum file size: 10MB</div>
+    <!-- Step 2: Questions -->
+    <div *ngIf="currentStep === 2" class="form-step">
+      <div class="form-group">
+        <label>Which class would you like to register for?</label>
+        <select formControlName="class">
+          <option value="">Select an answer</option>
+          <option value="Silver">Silver Class</option>
+          <option value="Gold">Gold Class</option>
+          <option value="Exclusive">Exclusive Class</option>
+        </select>
+        <div
+          class="error-message"
+          *ngIf="
+            userForm.get('class')?.touched && userForm.get('class')?.invalid
+          "
+        >
+          {{ getErrorMessage("class") }}
         </div>
       </div>
 
-<!-- Navigation Buttons -->
-<div class="form-actions">
-    <button
-      type="button"
-      *ngIf="currentStep > 1"
-      (click)="previousStep()"
-      class="btn-secondary"
-      [disabled]="isSubmitting"
-    >
-    Cancel
-    </button>
-    <button
-      type="button"
-      *ngIf="currentStep < 3"
-      (click)="nextStep()"
-      class="btn-primary"
-      [disabled]="isSubmitting"
-    >
-      Next
-    </button>
+      <div class="form-group">
+        <label>What do you hope to gain from this Experience?</label>
+        <input type="text" formControlName="experience" />
+        <div
+          class="error-message"
+          *ngIf="
+            userForm.get('experience')?.touched &&
+            userForm.get('experience')?.invalid
+          "
+        >
+          {{ getErrorMessage("experience") }}
+        </div>
+      </div>
 
-    <button
-    type="submit"
-    *ngIf="currentStep === 3"
-    class="btn-primary"
-    [disabled]="isSubmitting || !userForm.valid || !selectedFile"
-  >
-    {{ isSubmitting ? "Submitting..." : "Submit" }}
-  </button>
-</div>
-</form>
+      <div class="form-group">
+        <label>Have you previously taken any Gospel or bible Class?</label>
+        <select formControlName="previous_class">
+          <option value="">Select an answer</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+        <div
+          class="error-message"
+          *ngIf="
+            userForm.get('previous_class')?.touched &&
+            userForm.get('previous_class')?.invalid
+          "
+        >
+          {{ getErrorMessage("previous_class") }}
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 3: Additional Questions and File Upload -->
+    <div *ngIf="currentStep === 3" class="form-step">
+      <div class="form-group">
+        <label
+          >Is there anything you would love to share with your mentor?</label
+        >
+        <textarea formControlName="mentor" rows="3"></textarea>
+        <div
+          class="error-message"
+          *ngIf="
+            userForm.get('mentor')?.touched && userForm.get('mentor')?.invalid
+          "
+        >
+          {{ getErrorMessage("mentor") }}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Any additional comments?</label>
+        <textarea formControlName="reciept" rows="3"></textarea>
+        <div
+          class="error-message"
+          *ngIf="
+            userForm.get('reciept')?.touched && userForm.get('reciept')?.invalid
+          "
+        >
+          {{ getErrorMessage("reciept") }}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label
+          >Upload Payment Receipt (Zenith Bank - 1223572725 - Flourish Peters
+          Ministry)</label
+        >
+        <input
+          type="file"
+          (change)="onFileSelect($event)"
+          accept=".pdf,.doc,.docx"
+        />
+        <div class="file-hint">Maximum file size: 10MB</div>
+      </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="form-actions">
+      <button
+        type="button"
+        *ngIf="currentStep > 1"
+        (click)="previousStep()"
+        class="btn-secondary"
+        [disabled]="isSubmitting"
+      >
+        Cancel
+      </button>
+      <button
+        type="button"
+        *ngIf="currentStep < 3"
+        (click)="nextStep()"
+        class="btn-primary"
+        [disabled]="isSubmitting"
+      >
+        Next
+      </button>
+
+      <button
+        type="submit"
+        *ngIf="currentStep === 3"
+        class="btn-primary"
+        [disabled]="isSubmitting || !userForm.valid || !selectedFile"
+      >
+        {{ isSubmitting ? "Submitting..." : "Submit" }}
+      </button>
+    </div>
+  </form>
 </div>
