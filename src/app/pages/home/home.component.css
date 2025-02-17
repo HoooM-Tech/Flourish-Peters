@@ -16,12 +16,12 @@ section #hero {
 
 div.center-text {
   position: absolute;
-  top: 55%; /* Adjusted from 50% to move down slightly */
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 600px;
   text-align: center;
-  padding-top: 80px; /* Add padding to prevent overlap with nav */
+  padding-top: 80px;
 }
 
 .center-text h1 {
@@ -29,6 +29,8 @@ div.center-text {
   font-size: 50px;
   font-weight: 300;
   line-height: 80px;
+  /* transition: opacity 0.5s ease-in-out; */
+  /* opacity: 1; */
 }
 
 .center-text h1 strong {
@@ -273,13 +275,14 @@ div.center-text {
 }
 .books {
   width: auto;
-  /* height: 500px; */
   display: flex;
-  /* flex-wrap: wrap; */
   align-items: center;
   justify-content: center;
   gap: 45px;
-  border-left: 3px solid var(--rr, rgba(254, 254, 254, 0.00));
+  padding-left: 30px;
+  border-left: 3px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(177.25deg, rgba(254, 254, 254, 0) 9.87%, rgba(234, 234, 234, 0.7) 36.65%, rgba(152, 152, 152, 0) 83.03%);
 }
 .book {
   width: 230px;
@@ -367,7 +370,6 @@ div.center-text {
     #100a0c 42.39%,
     #070d2b 59.79%
   );
-  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -375,7 +377,6 @@ div.center-text {
 #teachings .message-content {
   width: auto;
   display: flex;
-  /* justify-content: space-between; */
   margin-top: 130px;
   margin-bottom: 100px;
   margin-left: 150px;
@@ -400,13 +401,15 @@ div.center-text {
 }
 .sermons {
   width: 100%;
-  /* height: 500px; */
   display: flex;
-  /* flex-wrap: wrap; */
   align-items: center;
   justify-content: center;
   gap: 45px;
-  border-left: 3px solid var(--rr, rgba(254, 254, 254, 0.00));
+  padding-left: 30px;
+  border-left: 3px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(177.25deg, rgba(254, 254, 254, 0) 9.87%, 
+  rgba(234, 234, 234, 0.7) 36.65%, rgba(152, 152, 152, 0) 83.03%);
 }
 .get-message {
   width: 230px;
@@ -478,14 +481,14 @@ div.center-text {
 }
 .events {
   width: 900px;
-  /* overflow-x: scroll; */
-  /* height: 500px; */
   display: flex;
-  /* flex-wrap: wrap; */
   align-items: center;
   justify-content: center;
   gap: 20px;
-  border-left: 3px solid var(--rr, rgba(254, 254, 254, 0.00));
+  padding-left: 30px;
+  border-left: 3px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(177.25deg, rgba(254, 254, 254, 0) 9.87%, rgba(234, 234, 234, 0.7) 36.65%, rgba(152, 152, 152, 0) 83.03%);
 }
 .precept1{
   margin-left: 50px;
@@ -628,6 +631,12 @@ div.center-text {
 .story{
   padding: 15px;
 }
+.story:hover{
+  background: none;
+  border: 0.24px solid rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+}
 
 /* PRAYER */
 #prayer {
@@ -643,6 +652,7 @@ div.center-text {
   justify-content: center;
   justify-content: center;
   align-items: center;
+  display: none;
 }
 .prayer-box {
   width: 90vw;

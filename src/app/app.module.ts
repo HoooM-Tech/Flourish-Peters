@@ -20,6 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MmtformService } from './services/mmtform.service';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { HttpClientModule } from '@angular/common/http';
+import { HeroTextAnimateComponent } from './pages/hero-text-animate/hero-text-animate.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { HttpClientModule } from '@angular/common/http';
     MmtComponent,
     MmtNavComponent,
     MmtFooterComponent,
-    FormDialogComponent
+    FormDialogComponent,
+    HeroTextAnimateComponent
   ],
   imports: [
     BrowserModule,

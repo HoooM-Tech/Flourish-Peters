@@ -54,9 +54,18 @@ ul li:hover {
   transition: 0.5s ease-in-out;
 }
 .far-right{
-  width: auto;
+  width: 180px;
+  height: 60px;
   margin-top: 20px;
   margin-right: 30px;
+  background: rgba(125, 109, 109, 1);
+  backdrop-filter: blur(7.650000095367432px);
+  box-shadow: -1.53px -7.65px 4.82px 0px rgba(51, 34, 51, 0.13) inset;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
 }
 
 .nav-btn {
@@ -64,7 +73,7 @@ ul li:hover {
   box-shadow: -2px -10px 6.3px 0px rgba(50, 50, 50, 0.25) inset;
   backdrop-filter: blur(10px);
   border-radius: 40px;
-  width: 180px;
+  width: 170px;
   height: 50px;
   outline: none;
   border: none;
@@ -72,13 +81,54 @@ ul li:hover {
   color: rgba(255, 255, 255, 1);
   font-size: 18px;
   line-height: 30px;
-  margin-right: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 .nav-btn:hover {
   cursor: pointer;
+}
+.circle {
+  position: absolute;
+  width: 8px;
+  height: 6px;
+  background: rgba(255, 255, 255, 1);
+  opacity: 0.5;
+  border-radius: 50%;
+}
+
+.leftside {
+  left: 0;
+}
+
+.rightside {
+  right: 0;
+}
+
+.far-right:hover .leftside {
+  bottom: 10px;
+  left: 2;
+  animation: rotate-left 5s infinite alternate ease-in-out;
+}
+
+.far-right:hover .rightside {
+  top: 10px;
+  right: 2;
+  animation: rotate-right 5s infinite alternate ease-in-out;
+}
+
+/* Animations */
+@keyframes rotate-left {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-5px) rotate(-15deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes rotate-right {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(5px) rotate(15deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
 }
 
 /* RESPONSIVENESS */

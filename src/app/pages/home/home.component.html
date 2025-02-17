@@ -3,9 +3,10 @@
     <app-header></app-header>
 
     <div class="center-text">
-      <h1>
-        <strong>He died for me, He died as me:</strong> When he was buried, I was buried.
-      </h1>
+      <h1 
+    data-aos="fade-in"
+    data-aos-duration="1200"
+     [innerHTML]="currentText"></h1>
       <div class="hero-button">
         <button routerLink="/sermon" class="explore">Explore Our Teaching</button>
         <button class="family">Be a Part of Our Family</button>
@@ -64,7 +65,11 @@
 
   <!-- Worship -->
   <section id="worship">
-    <img src="/assets/home/praise.png" />
+    <img src="/assets/home/praise.png" 
+    data-aos="fade-left"
+    data-aos-offset="300"
+    data-aos-easing="ease-in-sine"
+    data-aos-duration="1200" />
   </section>
 
   <!-- EXPLORE TEACHINGS -->
@@ -82,7 +87,7 @@
       data-aos-duration="1000">
         <div class="get-message message1">
           <img src="/assets/home/teaching.png"/>
-          <p>Embracing Faith: Stories of transformation and hope</p>
+          <p>The Fatherhood of God</p>
           <p class="author">By Pastor Flourish Peter</p>
         </div>
         <div class="get-message">
