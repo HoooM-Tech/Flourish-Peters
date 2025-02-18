@@ -32,19 +32,19 @@ export class FormDialogComponent {
     this.userForm = this.fB.group({
       fullName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      phone_number: [
+      phoneNumber: [
         '',
         [
           Validators.required,
           Validators.pattern('^[+0-9]{1,4}[- ]?([0-9]{10})$'),
         ],
       ],
-      is_member: ['', [Validators.required]],
+      isMember: ['', [Validators.required]],
 
       //step2
       class: ['', [Validators.required]],
       experience: ['', Validators.required],
-      previous_class: ['', Validators.required],
+      previousClass: ['', Validators.required],
 
       //step3
       mentor: ['', Validators.required],
@@ -56,19 +56,19 @@ export class FormDialogComponent {
     this.userForm = this.fB.group({
       fullName: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
-      phone_number: [
+      phoneNumber: [
         '',
         [
           Validators.required,
           Validators.pattern('^[+0-9]{1,4}[- ]?([0-9]{10})$'),
         ],
       ],
-      is_member: ['', [Validators.required]],
+      isMember: ['', [Validators.required]],
 
       // step2
       class: ['', [Validators.required]],
       experience: ['', [Validators.required]],
-      previous_class: ['', [Validators.required]],
+      previousClass: ['', [Validators.required]],
 
       // step3
       mentor: ['', [Validators.required]],
@@ -119,14 +119,14 @@ export class FormDialogComponent {
       case 1:
         return form.get('fullName')?.valid &&
           form.get('email')?.valid &&
-          form.get('phone_number')?.valid &&
-          form.get('is_member')?.valid
+          form.get('phoneNumber')?.valid &&
+          form.get('isMember')?.valid
           ? true
           : false;
       case 2:
         return form.get('class')?.valid &&
           form.get('experience')?.valid &&
-          form.get('previous_class')?.valid
+          form.get('previousClass')?.valid
           ? true
           : false;
       case 3:
@@ -148,7 +148,7 @@ export class FormDialogComponent {
       Object.keys(this.userForm.value).forEach((key) => {
         formData.append(key, this.userForm.value[key]);
       });
-      formData.append('file', this.selectedFile);
+      formData.append('receipt', this.selectedFile);
 
       this.registrationService.submitRegistration(formData).subscribe({
         next: (response) => {

@@ -48,7 +48,7 @@
       </div>
 
       <div class="form-group">
-        <label>Email Adress</label>
+        <label>Email Address</label>
         <input
           type="email"
           formControlName="email"
@@ -66,21 +66,21 @@
 
       <div class="form-group">
         <label>Phone Number</label>
-        <input type="tel" formControlName="phone_number" />
+        <input type="tel" formControlName="phoneNumber" />
         <div
           class="error-message"
           *ngIf="
-            userForm.get('phone_number')?.touched &&
-            userForm.get('phone_number')?.invalid
+            userForm.get('phoneNumber')?.touched &&
+            userForm.get('phoneNumber')?.invalid
           "
         >
-          {{ getErrorMessage("phone_number") }}
+          {{ getErrorMessage("phoneNumber") }}
         </div>
       </div>
 
       <div class="form-group">
         <label>Are you a member of Logic Church?</label>
-        <select formControlName="is_member">
+        <select formControlName="isMember">
           <option value="">Choose an option</option>
           <option value="Yes">Yes</option>
           <option value="No">No</option>
@@ -88,11 +88,11 @@
         <div
           class="error-message"
           *ngIf="
-            userForm.get('is_member')?.touched &&
-            userForm.get('is_member')?.invalid
+            userForm.get('isMember')?.touched &&
+            userForm.get('isMember')?.invalid
           "
         >
-          {{ getErrorMessage("is_member") }}
+          {{ getErrorMessage("isMember") }}
         </div>
       </div>
     </div>
@@ -133,7 +133,7 @@
 
       <div class="form-group">
         <label>Have you previously taken any Gospel or bible Class?</label>
-        <select formControlName="previous_class">
+        <select formControlName="previousClass">
           <option value="">Select an answer</option>
           <option value="yes">Yes</option>
           <option value="no">No</option>
@@ -141,11 +141,11 @@
         <div
           class="error-message"
           *ngIf="
-            userForm.get('previous_class')?.touched &&
-            userForm.get('previous_class')?.invalid
+            userForm.get('previousClass')?.touched &&
+            userForm.get('previousClass')?.invalid
           "
         >
-          {{ getErrorMessage("previous_class") }}
+          {{ getErrorMessage("previousClass") }}
         </div>
       </div>
     </div>
@@ -188,7 +188,7 @@
         <input
           type="file"
           (change)="onFileSelect($event)"
-          accept=".pdf,.doc,.docx"
+          accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
         />
         <div class="file-hint">Maximum file size: 10MB</div>
       </div>

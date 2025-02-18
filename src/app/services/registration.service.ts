@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class RegistrationService {
-  private apiUrl = 'https://your-api-endpoint.com/register'; // Replace with your actual API
+  private apiUrl = 'https://logic-be.hooom.co/api/mmt-registrations';
 
   constructor(private http: HttpClient) {}
 
