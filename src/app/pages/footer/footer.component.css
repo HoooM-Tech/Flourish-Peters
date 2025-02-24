@@ -84,6 +84,16 @@ ul li{
     line-height: 22px;
     font-size: 18px;
 }
+.powered{
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    background-color: black;
+}
+.powered a{
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  font-weight: bold;
+}
 
 /* RESPONSIVENESS */
 @media screen and (max-width: 1440px) {
@@ -253,6 +263,9 @@ ul li{
       width: 100px !important;
       font-size: 18px;
       height: 55px !important;
+  }
+  .links{
+    margin-left: 12px;
   }
 }
 @media screen and (max-width: 414px) {
