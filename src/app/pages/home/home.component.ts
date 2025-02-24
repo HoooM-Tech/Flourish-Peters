@@ -16,7 +16,7 @@ export class HomeComponent implements AfterViewInit {
     '<strong>He died for me, He died as me:</strong> When he was buried, I was buried.',
     '<strong>He rose for me, He rose with me:</strong> Now I live in victory.',
     '<strong>He ascended for me, He ascended with me:</strong> Seated in heavenly places.',
-    '<strong>Now I am Seated with Christ:</strong> In Heavenly Place Glory'
+    '<strong>Now I am Seated with Christ:</strong> In Heavenly Place Glory.'
   ];
   currentText: string = this.texts[0];
   textIndex: number = 0;
