@@ -1,1 +1,203 @@
-<p>Hello</p>
+<section class="body">
+
+    <!-- banner -->
+    <section id="hero">
+        <app-header></app-header>
+    
+        <div class="center-text">
+            <h1>Shop</h1>
+        </div>
+    </section>
+
+    <div class="shop-container">
+        <!-- Navigation Tabs -->
+        <nav class="navigation">
+          <div class="container">
+            <div class="tab-list">
+              <button
+                *ngFor="let tab of tabs"
+                (click)="activeTab = tab"
+                [class.active]="activeTab === tab"
+                class="tab-button"
+              >
+                {{ tab | titlecase }}
+              </button>
+            </div>
+          </div>
+        </nav>
+      
+        <!-- Featured Content -->
+        <div *ngIf="activeTab === 'featured'" class="featured-content">
+          <!-- Books Preview Section -->
+          <div class="preview-section">
+            <div class="banner">
+              <!-- <div class="banner-overlay"></div> -->
+              <img
+                src="/assets/shop/book-banner.png"
+                alt="Books"
+                class="banner-image"
+              />
+              <div class="banner-content">
+                <h2 class="banner-title">Books</h2>
+                <p class="banner-summ">See all the latest books from Dr. Flourish Peters!</p>
+                <div class="see-all" (click)="activeTab = 'books'">
+                  <span>SEE ALL BOOKS</span>
+                  <span class="arrow">→</span>
+                </div>
+              </div>
+            </div>
+            <div class="preview-grid">
+              <div *ngFor="let product of previewBooks" class="product-card">
+                <div class="image-container">
+                  <img
+                    [src]="product.image"
+                    [alt]="product.title"
+                    class="product-image"
+                  />
+                </div>
+                <div class="product-info">
+                  <div class="product-info1">
+                    <h3 class="product-title">{{ product.title }}</h3>
+                    <p class="product-price">N {{ product.price.toFixed(2) }}</p>
+                  </div>
+                  <div class="product-info1">
+                    <p class="product-author">{{ product.author }}</p>
+                    <p class="product-author">{{ product.type }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Music Preview Section -->
+          <div class="preview-section">
+            <div class="banner">
+              <div class="banner-overlay"></div>
+              <img
+                src="/assets/shop/music-banner.png"
+                alt="Music"
+                class="banner-image"
+              />
+              <div class="banner-content">
+                <h2 class="banner-title">Music</h2>
+                <p class="banner-summ">Check out great worship music from  Dr. Flourish Peters!</p>
+                <div class="see-all" (click)="activeTab = 'music'">
+                  <span class="arrow">SEE ALL MUSIC</span>
+                  <span class="arrow">→</span>
+                </div>
+              </div>
+            </div>
+            <div class="preview-grid">
+              <div *ngFor="let product of previewMusic" class="product-card">
+                <div class="image-container">
+                  <img
+                    [src]="product.image"
+                    [alt]="product.title"
+                    class="product-image"
+                  />
+                </div>
+                <div class="product-info">
+                  <div class="product-info1">
+                    <h3 class="product-title">{{ product.title }}</h3>
+                    <p class="product-price">N {{ product.price.toFixed(2) }}</p>
+                  </div>
+                  <div class="product-info1">
+                    <p class="product-author">{{ product.author }}</p>
+                    <p class="product-author">{{ product.type }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Category Pages (Books & Music) -->
+        <div *ngIf="activeTab !== 'featured'">
+          <!-- Category Banner -->
+          <!-- <div class="banner">
+            <div class="banner-overlay"></div>
+            <img
+              [src]="activeTab === 'books' ? bookBannerImage : musicBannerImage"
+              [alt]="activeTab"
+              class="banner-image"
+            />
+            <div class="banner-content">
+              <h2 class="banner-title">{{ activeTab | titlecase }}</h2>
+              <div class="see-all">
+                <span>See all</span>
+                <span class="arrow">→</span>
+              </div>
+            </div>
+          </div>
+       -->
+          <!-- Filter Bar -->
+          <div class="filter-bar">
+            <div class="container">
+              <div class="filter-grid">
+                <div class="filter-item">
+                  <select [(ngModel)]="selectedAuthor" class="select-input">
+                    <option value="any">Any Author</option>
+                    <option value="popular">Popular Authors</option>
+                    <option value="new">New Authors</option>
+                  </select>
+                </div>
+      
+                <div class="filter-item">
+                  <select [(ngModel)]="selectedSort" class="select-input">
+                    <option value="newest">Newest</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="name">Name</option>
+                  </select>
+                </div>
+      
+                <div class="filter-item search-container">
+                  <input
+                    type="search"
+                    placeholder="Search"
+                    [(ngModel)]="searchQuery"
+                    class="search-input"
+                  />
+                  <i class="search-icon">🔍</i>
+                </div>
+      
+                <div class="filter-item">
+                  <button (click)="clearFilters()" class="clear-button">
+                    Clear Filters
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Product Grid -->
+          <div class="container">
+            <div class="product-grid">
+              <div *ngFor="let product of filteredProducts" class="product-card">
+                <div class="image-container">
+                  <img
+                    [src]="product.image"
+                    [alt]="product.title"
+                    class="product-image"
+                  />
+                </div>
+                <div class="product-info">
+                  <div class="product-info1">
+                    <h3 class="product-title">{{ product.title }}</h3>
+                    <p class="product-price">N {{ product.price.toFixed(2) }}</p>
+                  </div>
+                  <div class="product-info1">
+                    <p class="product-author">{{ product.author }}</p>
+                    <p class="product-author">{{ product.type }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+    <!-- footer -->
+     <app-footer></app-footer>
+</section>

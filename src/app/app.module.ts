@@ -21,6 +21,7 @@ import { MmtformService } from './services/mmtform.service';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { HttpClientModule } from '@angular/common/http';
 import { HeroTextAnimateComponent } from './pages/hero-text-animate/hero-text-animate.component';
+import { AboutApComponent } from './pages/about-ap/about-ap.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { HeroTextAnimateComponent } from './pages/hero-text-animate/hero-text-an
     MmtNavComponent,
     MmtFooterComponent,
     FormDialogComponent,
-    HeroTextAnimateComponent
+    HeroTextAnimateComponent,
+    AboutApComponent
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,7 @@ import { GiveComponent } from './pages/give/give.component';
 import { ShopComponent } from './pages/shop/shop.component';
 import { MmtComponent } from './pages/mmt/mmt.component';
 import { SermonComponent } from './pages/sermon/sermon.component';
+import { AboutApComponent } from './pages/about-ap/about-ap.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path: 'our-events', component: EventsComponent},
   {path: 'support', component: GiveComponent},
   {path: 'much-more-tribe', component: MmtComponent},
-  {path: 'sermon', component: SermonComponent}
+  {path: 'sermon', component: SermonComponent},
+  {path: 'about-amaka-peters', component: AboutApComponent}
 ];
 
 @NgModule({
