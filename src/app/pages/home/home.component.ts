@@ -32,6 +32,6 @@ export class HomeComponent implements AfterViewInit {
 
       // Reinitialize AOS on text change
       setTimeout(() => AOS.refresh(), 100);
-    }, 8000); // Change every 8 seconds
+    }, 2500); // Change every 8 seconds
   }
 }

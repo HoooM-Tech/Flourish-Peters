@@ -17,6 +17,7 @@
     font-size: 80px;
     line-height: 90.2px;
     font-weight: 400;
+    font-family: 'Outfit-Regular';
 }
 
 /* MAIN-CONTACT STYLE */
@@ -46,12 +47,14 @@
     color: rgba(255, 255, 255, 1);
     font-size: 55px;
     line-height: 70px;
+    font-family: 'Outfit-Regular';
 }
 .contact-left p{
     color: rgba(255, 255, 255, 1);
     font-size: 20px;
     line-height: 36px;
     font-weight: 400;
+    font-family: 'Outfit-Regular';
 }
 .contact-right{
     width: 700px;
@@ -67,6 +70,7 @@
     color: rgba(255, 255, 255, 1);
     line-height: 27px;
     padding-bottom: 12px;
+    font-family: 'Outfit-Regular';
 }
 form input{
     width: 580px;
@@ -78,6 +82,7 @@ form input{
     margin-bottom: 12px;
     color: rgba(255, 255, 255, 1);
     font-size: 18px;
+    font-family: 'Outfit-Regular';
 }
 form input::placeholder{
     padding-left: 12px;
@@ -115,6 +120,7 @@ form textarea::placeholder{
     background: none;
     outline: none;
     border-radius: 12px;
+    font-family: 'Outfit-Regular';
 }
 .form button:hover{
     cursor: pointer;

@@ -13,6 +13,11 @@ body{
     src: url('../src/assets/fonts/PolySans-Neutral.ttf');
 }
 
+@font-face {
+  font-family: 'Outfit-Regular';
+  src: url('../src/assets/fonts/OTF/Outfit-Regular.otf');
+}
+
 .hide-scrollbar::-webkit-scrollbar {
     display: none;
   }

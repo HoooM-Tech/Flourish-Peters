@@ -17,6 +17,7 @@
     font-size: 80px;
     line-height: 90.2px;
     font-weight: 400;
+    font-family: 'Outfit-Regular';
 }
 
 /* EVENTS */
@@ -54,6 +55,7 @@
     line-height: normal;
     padding-left: 50px;
     padding-top: 30px;
+    font-family: 'Outfit-Regular';
 }
 input{
     border-radius: 4px;
@@ -64,10 +66,12 @@ input{
     padding-top: 5px;
     margin-top: 10px;
     margin-left: 50px;
+    font-family: 'Outfit-Regular';
 }
 label{
     padding-left: 3px;
     color: rgba(255, 255, 255, 1);
+    font-family: 'Outfit-Regular';
 }
 .filter .filter-text{
     color: rgba(255, 255, 255, 1);
@@ -75,6 +79,7 @@ label{
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    font-family: 'Outfit-Regular';
 }
 .available-events{
     width: 800px;
@@ -98,6 +103,7 @@ label{
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
+    font-family: 'Outfit-Regular';
 }
 .event-list .title{
     color: rgba(255, 255, 255, 1);
@@ -106,6 +112,7 @@ label{
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    font-family: 'Outfit-Regular';
 }
 .date-time{
     display: flex;
@@ -117,6 +124,7 @@ label{
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    font-family: 'Outfit-Regular';
 }
 .event-list img{
     width: 300px;

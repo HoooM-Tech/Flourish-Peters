@@ -17,6 +17,7 @@
     font-size: 80px;
     line-height: 90.2px;
     font-weight: 400;
+    font-family: 'Outfit-Regular';
 }
 
 /* GIVING */
@@ -41,6 +42,7 @@
     font-weight: 500;
     line-height: normal;
     opacity: 0.7;
+    font-family: 'Outfit-Regular';
 }
 .giving-container .desc{
     color: rgba(255, 255, 255, 1);
@@ -50,6 +52,7 @@
     line-height: normal;
     padding-top: 8px;
     padding-bottom: 12px;
+    font-family: 'Outfit-Regular';
 }
 .text{
     width: 1200px;
@@ -67,6 +70,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
     opacity: 0.7;
+    font-family: 'Outfit-Regular';
 }
 .text h2{
     color: rgba(255, 255, 255, 1);
@@ -76,6 +80,7 @@
     line-height: normal;
     padding-top: 30px;
     padding-bottom: 5px;
+    font-family: 'Outfit-Regular';
 }
 .apps{
     width: 1200px;
@@ -101,6 +106,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    font-family: 'Outfit-Regular';
 }
 .apps button:hover{
     cursor: pointer;
@@ -117,6 +123,9 @@
 .bank-trf{
     width: 200px;
     text-align: center;
+}
+.bank-trf p{
+    font-family: 'Outfit-Regular';
 }
 .transfer{
     width: 1200px;
