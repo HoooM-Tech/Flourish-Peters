@@ -9,63 +9,70 @@ import { RegistrationService } from 'src/app/services/registration.service';
 @Component({
   selector: 'app-form-dialog',
   templateUrl: './form-dialog.component.html',
-  styleUrls: ['./form-dialog.component.css']
+  styleUrls: ['./form-dialog.component.css'],
 })
 export class FormDialogComponent {
-
   currentStep = 1;
   userForm!: FormGroup;
   selectedFile: File | null = null;
   isSubmitting = false;
-  
 
   steps: Step[] = [
     { title: 'Personal Information', completed: false },
     { title: 'Additional Questions', completed: false },
-    { title: 'File Upload', completed: false }
+    { title: 'File Upload', completed: false },
   ];
 
-  constructor(public mmtFormService: MmtformService, private fB: FormBuilder, private router: Router, private registrationService: RegistrationService){
+  constructor(
+    public mmtFormService: MmtformService,
+    private fB: FormBuilder,
+    private router: Router,
+    private registrationService: RegistrationService
+  ) {
     this.userForm = this.fB.group({
       fullName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      phone_number: ['', [Validators.required, Validators.pattern('^[+0-9]{1,4}[- ]?([0-9]{10})$')]],
-      is_member: ['', [Validators.required]],
-
+      phoneNumber: [
+        '',
+        [
+          Validators.required,
+          Validators.pattern('^[+0-9]{1,4}[- ]?([0-9]{10})$'),
+        ],
+      ],
+      isMember: ['', [Validators.required]],
 
       //step2
       class: ['', [Validators.required]],
       experience: ['', Validators.required],
-      previous_class: ['', Validators.required],
+      previousClass: ['', Validators.required],
 
       //step3
-      mentor:  ['', Validators.required],
-      reciept: ['', Validators.required]
+      mentor: ['', Validators.required],
+      reciept: ['', Validators.required],
     });
-
   }
 
   private initForm(): void {
     this.userForm = this.fB.group({
-      fullName: ["", [Validators.required]],
-      email: ["", [Validators.required, Validators.email]],
-      phone_number: [
-        "",
+      fullName: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
+      phoneNumber: [
+        '',
         [
           Validators.required,
-          Validators.pattern("^[+0-9]{1,4}[- ]?([0-9]{10})$"),
+          Validators.pattern('^[+0-9]{1,4}[- ]?([0-9]{10})$'),
         ],
       ],
-      is_member: ["", [Validators.required]],
+      isMember: ['', [Validators.required]],
 
       // step2
-      class: ["", [Validators.required]],
-      experience: ["", [Validators.required]],
-      previous_class: ["", [Validators.required]],
+      class: ['', [Validators.required]],
+      experience: ['', [Validators.required]],
+      previousClass: ['', [Validators.required]],
 
       // step3
-      mentor: ["", [Validators.required]],
-      reciept: ["", [Validators.required]],
+      mentor: ['', [Validators.required]],
+      reciept: ['', [Validators.required]],
     });
   }
 
@@ -74,7 +81,7 @@ export class FormDialogComponent {
     if (input.files && input.files.length > 0) {
       const file = input.files[0];
       if (file.size > 10 * 1024 * 1024) {
-        Swal.fire("Error", "File size should not exceed 10MB", "error");
+        Swal.fire('Error', 'File size should not exceed 10MB', 'error');
         return;
       }
       this.selectedFile = file;
@@ -87,7 +94,7 @@ export class FormDialogComponent {
     const currentStepValid = this.validateCurrentStep();
 
     if (!currentStepValid) {
-      Swal.fire("Error", "Please fill all required fields correctly", "error");
+      Swal.fire('Error', 'Please fill all required fields correctly', 'error');
       return;
     }
 
@@ -110,21 +117,21 @@ export class FormDialogComponent {
 
     switch (this.currentStep) {
       case 1:
-        return form.get("fullName")?.valid &&
-          form.get("email")?.valid &&
-          form.get("phone_number")?.valid &&
-          form.get("is_member")?.valid
+        return form.get('fullName')?.valid &&
+          form.get('email')?.valid &&
+          form.get('phoneNumber')?.valid &&
+          form.get('isMember')?.valid
           ? true
           : false;
       case 2:
-        return form.get("class")?.valid &&
-          form.get("experience")?.valid &&
-          form.get("previous_class")?.valid
+        return form.get('class')?.valid &&
+          form.get('experience')?.valid &&
+          form.get('previousClass')?.valid
           ? true
           : false;
       case 3:
-        return form.get("mentor")?.valid &&
-          form.get("reciept")?.valid &&
+        return form.get('mentor')?.valid &&
+          form.get('reciept')?.valid &&
           !!this.selectedFile
           ? true
           : false;
@@ -141,31 +148,37 @@ export class FormDialogComponent {
       Object.keys(this.userForm.value).forEach((key) => {
         formData.append(key, this.userForm.value[key]);
       });
-      formData.append("file", this.selectedFile);
+      formData.append('receipt', this.selectedFile);
 
       this.registrationService.submitRegistration(formData).subscribe({
         next: (response) => {
           Swal.fire(
-            "Success",
-            "Registration completed successfully!",
-            "success",
+            'Success',
+            'Registration submitted successfully!',
+            'success'
           );
-          this.steps[2].completed = true;
           this.resetForm();
           this.mmtFormService.closeDialog();
         },
         error: (error) => {
           Swal.fire(
-            "Error",
-            "Failed to submit registration. Please try again.",
-            "error",
+            'Error',
+            error.error?.message ||
+              'Failed to submit registration. Please try again.',
+            'error'
           );
-          console.error("Registration error:", error);
+          console.error('Registration error:', error);
         },
         complete: () => {
           this.isSubmitting = false;
         },
       });
+    } else {
+      Swal.fire(
+        'Error',
+        'Please complete all required fields before submitting.',
+        'error'
+      );
     }
   }
 
@@ -179,10 +192,10 @@ export class FormDialogComponent {
   getErrorMessage(controlName: string): string {
     const control = this.userForm?.get(controlName);
     if (control?.errors) {
-      if (control.errors["required"]) return "This field is required";
-      if (control.errors["email"]) return "Please enter a valid email";
-      if (control.errors["pattern"]) return "Please enter a valid phone number";
+      if (control.errors['required']) return 'This field is required';
+      if (control.errors['email']) return 'Please enter a valid email';
+      if (control.errors['pattern']) return 'Please enter a valid phone number';
     }
-    return "";
+    return '';
   }
 }
