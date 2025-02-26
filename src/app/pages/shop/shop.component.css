@@ -245,6 +245,7 @@
     height: 200px;
     object-fit: contain;
     transition: transform 0.3s;
+    margin-top: 2rem;
   }
   
   .product-card:hover .product-image {

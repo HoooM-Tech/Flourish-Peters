@@ -116,7 +116,7 @@
     text-align: center;
     margin-bottom: 15px;
     margin-top: 100px;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     justify-content: space-between;
 }
@@ -133,6 +133,7 @@
     margin-bottom: 15px;
     margin-top: 80px;
     justify-items: center;
+    display: none;
 }
 .transfer img{
     width: 100px;

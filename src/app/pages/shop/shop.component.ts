@@ -52,7 +52,7 @@ export class ShopComponent {
     {
       id: "3",
       image: "assets/shop/jesusanthem.png",
-      title: "I Have Life",
+      title: "Jesus Anthem",
       price: 10000,
       author: "Dr. Flourish Peters & Noble...",
       type: "Music"
@@ -60,7 +60,7 @@ export class ShopComponent {
     {
       id: "4",
       image: "assets/shop/lifemusic.png",
-      title: "Jesus Anthem",
+      title: "I Have Life",
       price: 10000,
       author: "Dr. Flourish Peters",
       type: "Music"
