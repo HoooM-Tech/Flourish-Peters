@@ -4,7 +4,7 @@
     </div>
 
     <div class="right">
-        <div class="menu_icons">
+        <div class="menu_icons menu">
             <i class="{{menu_icon}}" (click)="openMenu()" style="color: rgba(255, 255, 255, 1)"></i>
         </div>
 
@@ -15,7 +15,7 @@
             <li routerLink="/support" (click)="closeMenu()">Give</li>
             <li routerLink="/about-flourish-peters" (click)="closeMenu()">About</li>
             <li routerLink="/contact-us" (click)="closeMenu()">Contact Us</li>
-            <li class="not-show"><button routerLink="/much-more-tribe" class="nav-btn" (click)="closeMenu()"><img src="/assets/home/favicon1.png"> Join MMT</button></li>
+            <!-- <li class="not-show"><button routerLink="/much-more-tribe" class="nav-btn" (click)="closeMenu()"><img src="/assets/home/favicon1.png"> Join MMT</button></li> -->
         </ul>
         
     </div>
@@ -26,4 +26,15 @@
         <span class="circle rightside"></span> 
     </div>
     
+    <!-- For Mobile -->
+     <div class="btn_menu">
+        <div class="menu_icon">
+            <i class="{{menu_icon}}" (click)="openMenu()" style="color: rgba(255, 255, 255, 1)"></i>
+        </div>
+        <div class="far-right">
+            <span class="circle leftside"></span> 
+            <button routerLink="/much-more-tribe" class="nav-btn" (click)="closeMenu()"><img src="/assets/home/favicon1.png"> Join MMT</button>
+            <span class="circle rightside"></span> 
+        </div>
+     </div>
 </nav>

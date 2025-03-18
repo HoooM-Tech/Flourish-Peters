@@ -67,9 +67,23 @@ ul li:hover {
   justify-content: center;
   border-radius: 40px;
 }
+.far-right{
+  width: 110px;
+  height: 45px;
+  margin-top: 20px;
+  margin-right: 30px;
+  background: rgba(125, 109, 109, 1);
+  backdrop-filter: blur(7.650000095367432px);
+  box-shadow: -1.53px -7.65px 4.82px 0px rgba(51, 34, 51, 0.13) inset;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+}
 
 .nav-btn {
-  background: linear-gradient(90.68deg, #535371 0.59%, #502005 96.12%);
+  background: linear-gradient(0deg, #3D3D3D 0%, #4D3636 100%);
   box-shadow: -2px -10px 6.3px 0px rgba(50, 50, 50, 0.25) inset;
   backdrop-filter: blur(10px);
   border-radius: 40px;
@@ -131,6 +145,10 @@ ul li:hover {
   100% { transform: translateY(0px) rotate(0deg); }
 }
 
+.btn_menu{
+  display: none;
+}
+
 /* RESPONSIVENESS */
 @media screen and (max-width: 1440px) {
   nav {
@@ -182,14 +200,14 @@ ul li:hover {
   }
   .left{
     width: auto;
-    margin-left: 5px;
+    margin-left: 1px;
  }
 
   .left img {
-    padding-left: 10px;
+    padding-left: 2px;
     margin-left: 0px;
-    width: 70px;
-    height: 60px;
+    width: 60px;
+    height: 50px;
     margin-top: 8px;
   }
   .not-show{
@@ -208,18 +226,37 @@ ul li:hover {
     gap: 40px;
   }
   .menu_icons{
+    display: none !important;
+  }
+  .btn_menu{
+    display: flex;
+    gap: 5px;
+  }
+  .menu_icon{
     display: block;
     margin-right: 20px;
-    margin-top: 2px;
-    margin-bottom: 15px;
+    margin-top: 20px;
+    margin-bottom: 13px;
+  }
+  .menu_icon i{
+    margin-top: 20px;
+  }
+  .far-right{
+    width: 110px;
+    height: 45px;
   }
   .farr-right{
     display: none;
   }
+  .nav-btn{
+    width: 100px;
+    height: 42px;
+    font-size: 12px;
+  }
   .dropdown{
     position: fixed;
     right: -350px;
-    top: 75px;
+    top: 80px;
     background: linear-gradient(250.46deg, #100A0C 3.62%, #070D2B 29.55%);
     border-radius: 10px;
     width: 280px;
@@ -227,17 +264,21 @@ ul li:hover {
     transition: 0.5s ease-in;
     display: block;
     justify-content: center;
+    text-align: center;
     align-items: center;
     z-index: 1000;
+    text-transform: capitalize !important;
   }
   .dropdown li{
-    padding: 5px;
+    /* padding: 5px; */
     display: flex;
     justify-content: center;
     align-items: center;
     list-style-type: none;
     padding-top: 10px;
     padding-bottom: 10px;
+    text-transform: capitalize !important;
+    border-bottom: 0.6px solid rgba(255, 255, 255, 0.3)
   }
   .first{
     padding-top: 15px;

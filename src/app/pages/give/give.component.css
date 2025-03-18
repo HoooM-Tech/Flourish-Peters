@@ -50,9 +50,13 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    padding-top: 8px;
-    padding-bottom: 12px;
+    padding-top: 10px;
+    padding-bottom: 18px;
     font-family: 'Outfit-Regular';
+}
+.one{
+    font-size: 14px;
+    padding-bottom: 8px;
 }
 .text{
     width: 1200px;

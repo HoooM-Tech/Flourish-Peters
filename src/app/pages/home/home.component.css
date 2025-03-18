@@ -48,7 +48,7 @@ div.center-text {
 }
 
 .hero-button .explore {
-  background: linear-gradient(90.68deg, #535371 0.59%, #502005 96.12%);
+  background: linear-gradient(0deg, #3D3D3D 0%, #4D3636 100%);
   box-shadow: -2px -10px 6.3px 0px rgba(50, 50, 50, 0.25) inset;
   backdrop-filter: blur(10px);
   border-radius: 12px;
@@ -272,6 +272,14 @@ div.center-text {
   opacity: 50%;
   font-family: 'Outfit-Regular';
 }
+.next{
+  transition: transform 0.3s;
+}
+.next:hover{
+  cursor: pointer;
+  transform: translateX(5px);
+}
+
 .shop-left h2 {
   color: rgba(255, 255, 255, 1);
   font-size: 65px;
@@ -294,12 +302,18 @@ div.center-text {
   width: 230px;
   display: block;
   text-align-last: left;
+  background: rgba(255, 255, 255, 0.07);
+  padding-left: 15px;
+  padding-top: 15px;
 }
 .book img {
-  width: 230px;
+  object-fit: contain;
+  align-items: center;
+  justify-content: center;
+  margin-left: 50px;
 }
 .book p {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 26px;
   font-weight: 500;
   color: rgba(255, 255, 255, 1);
@@ -308,7 +322,7 @@ div.center-text {
   font-family: 'Outfit-Regular';
 }
 .book .author {
-  font-size: 20px;
+  font-size: 14px;
   line-height: 26px;
   font-weight: 400;
   color: rgba(255, 255, 255, 1);
@@ -317,7 +331,7 @@ div.center-text {
   font-family: 'Outfit-Regular';
 }
 .book strong{
-  font-size: 20px;
+  font-size: 18px;
   line-height: 26px;
   font-weight: 400;
   color: rgba(255, 255, 255, 1);
@@ -426,7 +440,7 @@ div.center-text {
 }
 .get-message {
   width: 230px;
-  height: 400px;
+  height: 350px;
   display: block;
   text-align: center;
   border: 0.6px solid rgba(255, 255, 255, 0.2);
@@ -437,21 +451,21 @@ div.center-text {
   width: 230px;
 }
 .get-message p {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 26px;
   font-weight: 500;
   color: rgba(255, 255, 255, 1);
-  padding-top: 8px;
+  padding-top: 15px;
   padding-bottom: 8px;
   font-family: 'Outfit-Regular';
 }
 .get-message .author {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 26px;
   font-weight: 400;
   color: rgba(255, 255, 255, 1);
   opacity: 80%;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
   font-family: 'Outfit-Regular';
 }
 
