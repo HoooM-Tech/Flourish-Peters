@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import { MmtformService } from 'src/app/services/mmtform.service';
 import { Step } from 'src/app/interface/form';
 import Swal from 'sweetalert2';
-import { RegistrationService } from 'src/app/services/registration.service';
 
 @Component({
   selector: 'app-form-dialog',
@@ -14,90 +13,35 @@ import { RegistrationService } from 'src/app/services/registration.service';
 export class FormDialogComponent {
   currentStep = 1;
   userForm!: FormGroup;
-  selectedFile: File | null = null;
-  isSubmitting = false;
-
   steps: Step[] = [
     { title: 'Personal Information', completed: false },
     { title: 'Additional Questions', completed: false },
-    { title: 'File Upload', completed: false },
+    { title: 'Confirm & Pay', completed: false },
   ];
 
   constructor(
     public mmtFormService: MmtformService,
     private fB: FormBuilder,
-    private router: Router,
-    private registrationService: RegistrationService
+    private router: Router
   ) {
     this.userForm = this.fB.group({
       fullName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      phoneNumber: [
-        '',
-        [
-          Validators.required,
-          Validators.pattern('^[+0-9]{1,4}[- ]?([0-9]{10})$'),
-        ],
-      ],
-      isMember: ['', [Validators.required]],
-
-      //step2
-      class: ['', [Validators.required]],
+      phoneNumber: ['', Validators.required],
+      isMember: ['', Validators.required],
+      class: ['', Validators.required],
       experience: ['', Validators.required],
       previousClass: ['', Validators.required],
-
-      //step3
       mentor: ['', Validators.required],
       reciept: ['', Validators.required],
     });
   }
 
-  private initForm(): void {
-    this.userForm = this.fB.group({
-      fullName: ['', [Validators.required]],
-      email: ['', [Validators.required, Validators.email]],
-      phoneNumber: [
-        '',
-        [
-          Validators.required,
-          Validators.pattern('^[+0-9]{1,4}[- ]?([0-9]{10})$'),
-        ],
-      ],
-      isMember: ['', [Validators.required]],
-
-      // step2
-      class: ['', [Validators.required]],
-      experience: ['', [Validators.required]],
-      previousClass: ['', [Validators.required]],
-
-      // step3
-      mentor: ['', [Validators.required]],
-      reciept: ['', [Validators.required]],
-    });
-  }
-
-  onFileSelect(event: Event): void {
-    const input = event.target as HTMLInputElement;
-    if (input.files && input.files.length > 0) {
-      const file = input.files[0];
-      if (file.size > 10 * 1024 * 1024) {
-        Swal.fire('Error', 'File size should not exceed 10MB', 'error');
-        return;
-      }
-      this.selectedFile = file;
-    }
-  }
-
   nextStep(): void {
-    if (!this.userForm) return;
-
-    const currentStepValid = this.validateCurrentStep();
-
-    if (!currentStepValid) {
-      Swal.fire('Error', 'Please fill all required fields correctly', 'error');
+    if (!this.validateCurrentStep()) {
+      Swal.fire('Error', 'Please fill all required fields correctly.', 'error');
       return;
     }
-
     if (this.currentStep < 3) {
       this.steps[this.currentStep - 1].completed = true;
       this.currentStep++;
@@ -111,10 +55,7 @@ export class FormDialogComponent {
   }
 
   validateCurrentStep(): boolean {
-    if (!this.userForm) return false;
-
     const form = this.userForm;
-
     switch (this.currentStep) {
       case 1:
         return form.get('fullName')?.valid &&
@@ -130,9 +71,7 @@ export class FormDialogComponent {
           ? true
           : false;
       case 3:
-        return form.get('mentor')?.valid &&
-          form.get('reciept')?.valid &&
-          !!this.selectedFile
+        return form.get('mentor')?.valid && form.get('reciept')?.valid
           ? true
           : false;
       default:
@@ -140,53 +79,31 @@ export class FormDialogComponent {
     }
   }
 
-  onSubmit(): void {
-    if (this.userForm?.valid && this.selectedFile && !this.isSubmitting) {
-      this.isSubmitting = true;
-      const formData = new FormData();
-
-      Object.keys(this.userForm.value).forEach((key) => {
-        formData.append(key, this.userForm.value[key]);
-      });
-      formData.append('receipt', this.selectedFile);
-
-      this.registrationService.submitRegistration(formData).subscribe({
-        next: (response) => {
-          Swal.fire(
-            'Success',
-            'Registration submitted successfully!',
-            'success'
-          );
-          this.resetForm();
-          this.mmtFormService.closeDialog();
-        },
-        error: (error) => {
-          Swal.fire(
-            'Error',
-            error.error?.message ||
-              'Failed to submit registration. Please try again.',
-            'error'
-          );
-          console.error('Registration error:', error);
-        },
-        complete: () => {
-          this.isSubmitting = false;
-        },
-      });
-    } else {
-      Swal.fire(
-        'Error',
-        'Please complete all required fields before submitting.',
-        'error'
-      );
+  redirectToPayment(): void {
+    if (!this.userForm.valid) {
+      Swal.fire('Error', 'Please complete all required fields.', 'error');
+      return;
     }
-  }
 
-  private resetForm(): void {
-    this.userForm.reset();
-    this.currentStep = 1;
-    this.steps.forEach((step) => (step.completed = false));
-    this.selectedFile = null;
+    const selectedClass = this.userForm.get('class')?.value;
+
+    let paymentUrl = '';
+    switch (selectedClass) {
+      case 'Silver':
+        paymentUrl = 'https://flutterwave.com/pay/bjfpcvj5jazk';
+        break;
+      case 'Gold':
+        paymentUrl = 'https://flutterwave.com/pay/td8fwlqr9uph';
+        break;
+      case 'Exclusive':
+        paymentUrl = 'https://flutterwave.com/pay/zja3krszxuai';
+        break;
+      default:
+        Swal.fire('Error', 'Please select a class to continue.', 'error');
+        return;
+    }
+
+    window.location.href = paymentUrl;
   }
 
   getErrorMessage(controlName: string): string {

@@ -26,12 +26,8 @@
   </div>
 
   <!-- Form -->
-  <form
-    [formGroup]="userForm"
-    (ngSubmit)="onSubmit()"
-    class="registration-form"
-  >
-    <!-- Step 1: Personal Information -->
+  <form [formGroup]="userForm" class="registration-form">
+    <!-- Step 1 -->
     <div *ngIf="currentStep === 1" class="form-step">
       <div class="form-group">
         <label>Full Name</label>
@@ -97,7 +93,7 @@
       </div>
     </div>
 
-    <!-- Step 2: Questions -->
+    <!-- Step 2 -->
     <div *ngIf="currentStep === 2" class="form-step">
       <div class="form-group">
         <label>Which class would you like to register for?</label>
@@ -132,7 +128,7 @@
       </div>
 
       <div class="form-group">
-        <label>Have you previously taken any Gospel or bible Class?</label>
+        <label>Have you previously taken any Gospel or Bible Class?</label>
         <select formControlName="previousClass">
           <option value="">Select an answer</option>
           <option value="yes">Yes</option>
@@ -150,7 +146,7 @@
       </div>
     </div>
 
-    <!-- Step 3: Additional Questions and File Upload -->
+    <!-- Step 3 -->
     <div *ngIf="currentStep === 3" class="form-step">
       <div class="form-group">
         <label
@@ -179,49 +175,36 @@
           {{ getErrorMessage("reciept") }}
         </div>
       </div>
-
-      <div class="form-group">
-        <label
-          >Upload Payment Receipt (Zenith Bank - 1223572725 - Flourish Peters
-          Ministry)</label
-        >
-        <input
-          type="file"
-          (change)="onFileSelect($event)"
-          accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
-        />
-        <div class="file-hint">Maximum file size: 10MB</div>
-      </div>
     </div>
 
-    <!-- Navigation Buttons -->
+    <!-- Navigation -->
     <div class="form-actions">
       <button
         type="button"
         *ngIf="currentStep > 1"
         (click)="previousStep()"
         class="btn-secondary"
-        [disabled]="isSubmitting"
       >
         Cancel
       </button>
+
       <button
         type="button"
         *ngIf="currentStep < 3"
         (click)="nextStep()"
         class="btn-primary"
-        [disabled]="isSubmitting"
       >
         Next
       </button>
 
       <button
-        type="submit"
+        type="button"
         *ngIf="currentStep === 3"
+        (click)="redirectToPayment()"
         class="btn-primary"
-        [disabled]="isSubmitting || !userForm.valid || !selectedFile"
+        [disabled]="!userForm.valid"
       >
-        {{ isSubmitting ? "Submitting..." : "Submit" }}
+        Pay Now
       </button>
     </div>
   </form>
